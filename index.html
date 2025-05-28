@@ -1,0 +1,311 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neón Oni</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="branding">
+      <img src="IMG/LOGO NEON ONI.png" alt="Logo Neón Oni" />
+      <span class="titulo-japones">ネオン鬼</span>
+    </div>
+    <!-- Botones en la parte superior -->
+    <nav>
+      <div class="carrito-icono-container">
+        <img src="IMG/CARRITO BLANCO.png" alt="Carrito" id="icono-carrito" />
+        <span id="contador-carrito">0</span>
+      </div>
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="#contacto" class="btn">Contáctanos</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <video autoplay muted loop playsinline class="background-video">
+      <source src="IMG/Video pagina principal.mp4" type="video/mp4" />
+      Tu navegador no admite vídeos HTML5.
+    </video>
+    <div class="overlay">
+      <h1>Streetwear Japonés<br /><span>Con esencia Samurai</span></h1>
+      <button class="cta" onclick="window.location.href='productos.html'">Descubre la colección</button>
+    </div>
+  </section>
+
+  <!--NUEVA COLECCION -->
+
+  <section class="nueva-coleccion" id="nueva-coleccion">
+    <h2>NUEVA COLECCIÓN</h2>
+        <p>Inspirado por la disciplina samurái y la estética urbana japonesa</p>
+        <div class="coleccion-imagenes">
+            <a href="compra.html?producto=1" class="item-coleccion">
+                <img src="IMG/cuarta imagen.png" alt="Referencia 1">
+                <p class="desc">Sekushīna geisha</p>
+                <p class="price">$80.000</p>
+            </a>
+
+            <a href="compra.html?producto=2" class="item-coleccion">
+                <img src="IMG/Hoodie 1.jpg" alt="Referencia 2">
+                <p class="desc">Hoddie Haruto</p>
+                <p class="price">$90.000</p>
+            </a>
+
+            <a href="compra.html?producto=3" class="item-coleccion">
+                <img src="IMG/tercera imagen.png" alt="Referencia 3">
+                <p class="desc">Pad de Mouse - Geisha</p>
+                <p class="price">$30.000</p>
+            </a> 
+            
+        </div>
+  </section>
+  
+  <!--RESEÑAS-->
+
+  <section class="reseñas" id="reseñas">
+    <h2>RESEÑAS</h2>
+  
+    <div class="carousel">
+      <!-- Botón anterior -->
+      <button class="carousel-btn prev">‹</button>
+  
+      <div class="carousel-track">
+        <!-- Reseña 1 -->
+        <div class="reseña-card">
+          <div class="card-header">
+            <img src="IMG/Quinta imagen.jpeg" alt="Reseña 1" />
+            <div class="rating">★★★★★</div>
+          </div>
+          <div class="card-body">
+            <h3>David Alejandro</h3>
+            <p>Me encanta la calidad</p>
+          </div>
+        </div>
+  
+        <!-- Reseña 2 -->
+        <div class="reseña-card">
+          <div class="card-header">
+            <img src="IMG/tercera imagen.png" alt="Reseña 2" />
+            <div class="rating">★★★★★</div>
+          </div>
+          <div class="card-body">
+            <h3>Camila</h3>
+            <p>Diseños muy originales</p>
+          </div>
+        </div>
+  
+        <!-- Reseña 3 -->
+        <div class="reseña-card">
+          <div class="card-header">
+            <img src="IMG/cuarta imagen.png" alt="Reseña 3" />
+            <div class="rating">★★★★★</div>
+          </div>
+          <div class="card-body">
+            <h3>Santiago</h3>
+            <p>El envío fue rapidísimo</p>
+          </div>
+        </div>
+
+        <!-- Reseña 4-->
+        <div class="reseña-card">
+            <div class="card-header">
+              <img src="IMG/Quinta imagen.jpeg" alt="Reseña 3" />
+              <div class="rating">★★★★★</div>
+            </div>
+            <div class="card-body">
+              <h3>Santiago</h3>
+              <p>Muy buena calidad</p>
+            </div>
+          </div>
+
+          <!-- Reseña 5 -->
+        <div class="reseña-card">
+            <div class="card-header">
+              <img src="IMG/cuarta imagen.png" alt="Reseña 3" />
+              <div class="rating">★★★★★</div>
+            </div>
+            <div class="card-body">
+              <h3>Santiago</h3>
+              <p>Feliz con mi producto</p>
+            </div>
+          </div>
+      </div>
+  
+      <!-- Botón siguiente -->
+      <button class="carousel-btn next">›</button>
+    </div>
+  </section>
+
+  <!--SELECCION DE CATEGORY GRID, CAMISETAS, HOODIES, ACCESORIOS Y PERSONALIZADO-->
+
+  <section class="categories">
+    <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Categorías</h2>
+    <div class="category-grid">
+      <a href="productos.html?tipo=camisetas" class="category-card">
+        <img src="IMG/Primera imagen.jpeg" alt="Camisetas" />
+        <div class="overlay"></div>
+        <span class="category-title">CAMISETAS</span>
+      </a>
+  
+      <a href="productos.html?tipo=hoodies" class="category-card">
+        <img src="IMG/tercera imagen.png" alt="Hoodies" />
+        <div class="overlay"></div>
+        <span class="category-title">HOODIES</span>
+      </a>
+  
+      <a href="productos.html?tipo=accesorios" class="category-card">
+        <img src="IMG/cuarta imagen.png" alt="Accesorios" />
+        <div class="overlay"></div>
+        <span class="category-title">ACCESORIOS</span>
+      </a>
+  
+      <a href="personalizado.html" class="category-card">
+        <img src="IMG/segunda imagen.jpg" alt="Personalizado" />
+        <div class="overlay"></div>
+        <span class="category-title">PERSONALIZADO</span>
+      </a>
+
+
+    </div>
+  </section>
+  
+    <!--INFORMACION DE VISTA, PAGOS, ETC-->
+
+    <section class="info-benefits">
+        <div class="benefit">
+          <img src="IMG/candado.png" alt="Pago Seguro" />
+          <h3>PAGOS FLEXIBLES Y SEGUROS</h3>
+          <p>Aceptamos <strong>Nequi, Daviplata, Bancolombia, Visa y Mastercard</strong> con total seguridad.</p>
+        </div>
+        <div class="benefit">
+          <img src="IMG/CAMION.png" alt="Envío Exprés" />
+          <h3>ENVÍO EXPRÉS</h3>
+          <p>Recibe tu pedido en menos de <strong>2 días hábiles</strong>. <u>Aplica T&C</u></p>
+        </div>
+        <div class="benefit">
+          <img src="IMG/icono.png" alt="Cambios Rápidos" />
+          <h3>CAMBIOS FÁCILES</h3>
+          <p>Tienes hasta <strong>30 días</strong> para hacer cambios o devoluciones. <u>Consulta condiciones</u></p>
+        </div>
+        <div class="benefit">
+          <img src="IMG/estrella.png" alt="Calidad Premium" />
+          <h3>CALIDAD PREMIUM</h3>
+          <p>Fabricado con los <strong>estándares más altos</strong> y materiales resistentes.</p>
+        </div>
+      </section>
+
+  <!--FORMULARIO PARA CONTACTO-->
+  <section id="contacto" class="contact-section">
+    <h2>Contáctanos</h2>
+  
+    <form class="contact-form" onsubmit="enviarFormulario(event)">
+      <div class="input-group">
+        <input type="text" id="nombre" placeholder="Nombre" required />
+      </div>
+      <div class="input-group">
+        <input type="tel" id="telefono" placeholder="Teléfono" required />
+      </div>
+      <div class="input-group">
+        <textarea id="mensaje" placeholder="Tu mensaje..." required></textarea>
+      </div>
+      <button type="submit">Enviar</button>
+      <p class="confirmation-message" id="confirmacion">¡Mensaje enviado correctamente!</p>
+    </form>
+  </section>
+  
+  
+  <footer>
+    <p>© 2025 Neon Oni. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function enviarFormulario(event) {
+      event.preventDefault();
+      const nombre = document.getElementById("nombre").value;
+      const telefono = document.getElementById("telefono").value;
+      const mensaje = document.getElementById("mensaje").value;
+  
+      const texto = `Hola, soy ${nombre}. Mi número es ${telefono}. Mensaje: ${mensaje}`;
+      const url = `https://wa.me/573151774787?text=${encodeURIComponent(texto)}`;
+      window.open(url, "_blank");
+  
+      document.getElementById("confirmacion").style.display = "block";
+      setTimeout(() => {
+        document.getElementById("confirmacion").style.display = "none";
+      }, 4000);
+    }
+
+    document.querySelector(".carousel-btn.prev").addEventListener("click", () => {
+    document.querySelector(".carousel-track").scrollBy({
+      left: -300,
+      behavior: "smooth"
+    });
+  });
+
+  document.querySelector(".carousel-btn.next").addEventListener("click", () => {
+    document.querySelector(".carousel-track").scrollBy({
+      left: 300,
+      behavior: "smooth"
+    });
+  });
+  </script>
+
+<script>
+    function enviarFormulario(event) {
+      event.preventDefault();
+      
+      const nombre = document.getElementById("nombre").value.trim();
+      const telefono = document.getElementById("telefono").value.trim();
+      const mensaje = document.getElementById("mensaje").value.trim();
+  
+      if (!nombre || !telefono || !mensaje) {
+        alert("Por favor, completa todos los campos.");
+        return;
+      }
+  
+      const texto = `Hola, soy ${nombre}. Mi número es ${telefono}. Mensaje: ${mensaje}`;
+      const url = `https://wa.me/573151774787?text=${encodeURIComponent(texto)}`;
+      window.open(url, "_blank");
+  
+      // Mostrar mensaje de confirmación temporal
+      const confirmacion = document.getElementById("confirmacion");
+      confirmacion.style.display = "block";
+      setTimeout(() => {
+        confirmacion.style.display = "none";
+      }, 4000);
+    }
+  </script>
+
+  <script>
+    const carrito = [];
+  
+    function agregarAlCarrito(nombre, precio) {
+  carrito.push({ nombre, precio });
+  alert(`${nombre} agregado al carrito.`);
+  actualizarVistaCarrito();
+  actualizarContador();
+}
+
+function eliminarDelCarrito(index) {
+  carrito.splice(index, 1);
+  actualizarVistaCarrito();
+  actualizarContador();
+}
+
+function actualizarContador() {
+  document.getElementById("contador-carrito").innerText = carrito.length;
+}
+  </script>
+  
+<script type="module" src="productos.js"></script>
+  
+</body>
+
+
+</html>

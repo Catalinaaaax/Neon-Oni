@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalle de Producto</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="branding">
+      <img src="IMG/LOGO NEON ONI.png" alt="Logo Neón Oni" />
+      <span class="titulo-japones">ネオン鬼</span>
+    </div>
+    <nav>
+      <div class="carrito-icono-container">
+        <img src="IMG/CARRITO BLANCO.png" alt="Carrito" id="icono-carrito" />
+        <span id="contador-carrito">0</span>
+      </div>
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="#contacto" class="btn">Contáctanos</a>
+    </nav>
+  </header>
+
+  <main class="page-section" style="display: flex; flex-wrap: wrap; gap: 3rem; justify-content: center;">
+    <div style="flex: 1; max-width: 600px;">
+      <img id="imagen-producto" src="" alt="Producto" style="width: 100%; border-radius: 12px;" />
+    </div>
+
+    <div style="flex: 1; max-width: 600px;">
+      <h1 id="titulo-producto"></h1>
+      <p id="descripcion-producto"></p>
+      <p><strong>Precio:</strong> <span id="precio-producto"></span></p>
+      <p><strong>Material:</strong></p>
+      <div id="materiales-container" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;"></div>
+
+      <p id="tamaño-producto" style="display:none;"></p>
+
+      <p id="titulo-tallas"><strong>Tallas:</strong></p>
+      <div id="tallas-container" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;"></div>
+
+      <p><strong>Colores:</strong></p>
+      <div id="colores-container" style="display: flex; flex-wrap: wrap; gap: 0.5rem;"></div>
+
+      <p id="titulo-forma" style="display: none;"><strong>Forma:</strong></p>
+      <div id="forma-container" style="display: none; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;"></div>
+
+      <p style="color: #70f6f2;">Pedidos en Bogotá son contra entrega</p>
+      <button class="cta" onclick="comprarAhora()">Comprar Ahora</button>
+      <button class="cta" onclick="agregarAlCarrito()">Agregar al Carrito</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Neon Oni. Todos los derechos reservados.</p>
+  </footer>
+
+  <script type="module">
+    import { todosLosProductos } from './productos.js';
+
+    let producto = null;
+    let precioActual = "";
+    let materialSeleccionado = "";
+
+    const id = new URLSearchParams(window.location.search).get('producto');
+    producto = todosLosProductos.find(p => p.id == id);
+
+    if (!producto) {
+      document.querySelector("main").innerHTML = `
+        <h2 style="color: #ff278e; text-align: center;">Producto no encontrado 😢</h2>
+        <p style="text-align: center;"><a href="productos.html" class="btn">Volver a Productos</a></p>
+      `;
+    } else {
+      document.getElementById("imagen-producto").src = producto.imagen;
+      document.getElementById("titulo-producto").textContent = producto.nombre;
+      document.getElementById("descripcion-producto").textContent = producto.descripcion;
+
+      const precioSpan = document.getElementById("precio-producto");
+      const materialesContainer = document.getElementById("materiales-container");
+
+      if (producto.materiales && producto.materiales.length) {
+        producto.materiales.forEach((item, i) => {
+          const btn = document.createElement("button");
+          btn.className = "option-btn";
+          btn.textContent = `${item.nombre} (${item.precio})`;
+          btn.onclick = () => {
+            document.querySelectorAll("#materiales-container .option-btn").forEach(b => b.classList.remove("selected"));
+            btn.classList.add("selected");
+            precioActual = item.precio;
+            materialSeleccionado = item.nombre;
+            precioSpan.textContent = item.precio;
+          };
+          if (i === 0) {
+            btn.classList.add("selected");
+            precioActual = item.precio;
+            materialSeleccionado = item.nombre;
+            precioSpan.textContent = item.precio;
+          }
+          materialesContainer.appendChild(btn);
+        });
+      } else if (producto.material) {
+        materialSeleccionado = producto.material;
+        precioActual = producto.precio;
+        precioSpan.textContent = producto.precio;
+        materialesContainer.innerHTML = `<p style="color:#ccc;">${producto.material}</p>`;
+      } else {
+        precioActual = producto.precio;
+        materialSeleccionado = "No especificado";
+        precioSpan.textContent = producto.precio;
+        materialesContainer.innerHTML = `<p style="color:#999;">No aplica</p>`;
+      }
+
+      if (producto.tamaño && producto.tamaño.length) {
+        const tamañoElemento = document.getElementById("tamaño-producto");
+        tamañoElemento.innerHTML = `<strong>Tamaño:</strong> ${producto.tamaño.join(", ")}`;
+        tamañoElemento.style.display = "block";
+      }
+
+      const tallasContainer = document.getElementById("tallas-container");
+      const tituloTallas = document.getElementById("titulo-tallas");
+      if (producto.tallas && producto.tallas.length) {
+        producto.tallas.forEach(talla => {
+          const btn = document.createElement("button");
+          btn.className = "option-btn";
+          btn.textContent = talla;
+          btn.onclick = () => {
+            document.querySelectorAll("#tallas-container .option-btn").forEach(b => b.classList.remove("selected"));
+            btn.classList.add("selected");
+          };
+          tallasContainer.appendChild(btn);
+        });
+      } else {
+        tituloTallas.style.display = "none";
+        tallasContainer.style.display = "none";
+      }
+
+      const coloresContainer = document.getElementById("colores-container");
+      if (producto.colores && producto.colores.length) {
+        producto.colores.forEach(color => {
+          const btn = document.createElement("button");
+          btn.className = "color-btn";
+          btn.textContent = color;
+          btn.onclick = () => {
+            document.querySelectorAll("#colores-container .color-btn").forEach(b => b.classList.remove("selected"));
+            btn.classList.add("selected");
+          };
+          coloresContainer.appendChild(btn);
+        });
+      } else {
+        coloresContainer.innerHTML = `<p style="color: #999;">No aplica</p>`;
+      }
+
+      const formaContainer = document.getElementById("forma-container");
+      const tituloForma = document.getElementById("titulo-forma");
+
+      if (producto.forma && producto.forma.length) {
+        formaContainer.style.display = "flex";
+        tituloForma.style.display = "block";
+
+        producto.forma.forEach(opcion => {
+          const btn = document.createElement("button");
+          btn.className = "option-btn";
+          btn.textContent = opcion;
+          btn.onclick = () => {
+            document.querySelectorAll("#forma-container .option-btn").forEach(b => b.classList.remove("selected"));
+            btn.classList.add("selected");
+          };
+          formaContainer.appendChild(btn);
+        });
+      }
+    }
+
+    function comprarAhora() {
+      if (!producto) return;
+
+      const tallaSeleccionada = document.querySelector('#tallas-container .selected');
+      const talla = tallaSeleccionada ? tallaSeleccionada.textContent : "Sin seleccionar";
+
+      const colorSeleccionado = document.querySelector('#colores-container .selected');
+      const color = colorSeleccionado ? colorSeleccionado.textContent : "Sin seleccionar";
+
+      const formaSeleccionada = document.querySelector('#forma-container .selected');
+      const forma = formaSeleccionada ? formaSeleccionada.textContent : "Sin seleccionar";
+
+      const mensaje = `
+¡Hola! Quiero comprar el siguiente producto:
+
+*Producto:* ${producto.nombre}
+*Precio:* ${precioActual}
+*Material:* ${materialSeleccionado}
+*Talla:* ${talla}
+*Color:* ${color}
+*Forma:* ${forma}
+
+¿Cuáles son los métodos de pago y te adjunto la imagen que quiero personalizar?`;
+
+      window.open(`https://wa.me/573151774787?text=${encodeURIComponent(mensaje)}`, '_blank');
+    }
+
+    function agregarAlCarrito() {
+      if (!producto) return;
+
+      const tallaSeleccionada = document.querySelector('#tallas-container .selected');
+      const talla = tallaSeleccionada ? tallaSeleccionada.textContent : "Sin seleccionar";
+
+      const colorSeleccionado = document.querySelector('#colores-container .selected');
+      const color = colorSeleccionado ? colorSeleccionado.textContent : "Sin seleccionar";
+
+      const formaSeleccionada = document.querySelector('#forma-container .selected');
+      const forma = formaSeleccionada ? formaSeleccionada.textContent : "Sin seleccionar";
+
+      let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      carrito.push({
+        nombre: producto.nombre,
+        precio: precioActual || producto.precio,
+        material: materialSeleccionado,
+        talla,
+        color,
+        forma
+      });
+
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+      actualizarContador();
+      mostrarCarrito();
+    }
+
+    function actualizarContador() {
+      const contador = document.getElementById("contador-carrito");
+      if (contador) contador.textContent = JSON.parse(localStorage.getItem("carrito") || "[]").length;
+    }
+
+    function mostrarCarrito() {
+      let carrito = JSON.parse(localStorage.getItem("carrito") || "[]");
+
+      let panel = document.getElementById('carrito-panel');
+      if (!panel) {
+        panel = document.createElement('div');
+        panel.id = 'carrito-panel';
+        panel.style.cssText = `
+          position: fixed;
+          top: 70px;
+          right: 20px;
+          width: 300px;
+          background: #1c1c1c;
+          color: white;
+          border-radius: 10px;
+          padding: 15px;
+          z-index: 1000;
+          box-shadow: 0 0 10px #000;
+        `;
+        document.body.appendChild(panel);
+      }
+
+      panel.innerHTML = `
+        <h3>Carrito</h3>
+        <ul id="lista-carrito" style="list-style:none; padding:0; max-height:200px; overflow-y:auto;">
+          ${carrito.map((item, i) => `
+            <li style="margin-bottom: 10px;">
+              ${item.nombre} - ${item.precio}
+              <button onclick="eliminarDelCarrito(${i})" style="float:right; background:red; color:white; border:none; border-radius:5px; cursor:pointer;">X</button>
+            </li>`).join('')}
+        </ul>
+        <button onclick="pagarAhora()" style="width:100%; padding:10px; margin-top:10px; background:#a020f0; color:white; border:none; border-radius:8px; cursor:pointer;">Pagar ahora</button>
+      `;
+    }
+
+    function eliminarDelCarrito(index) {
+      let carrito = JSON.parse(localStorage.getItem("carrito") || "[]");
+      carrito.splice(index, 1);
+      localStorage.setItem("carrito", JSON.stringify(carrito));
+      actualizarContador();
+      mostrarCarrito();
+    }
+
+    function pagarAhora() {
+      let carrito = JSON.parse(localStorage.getItem("carrito") || "[]");
+      if (carrito.length === 0) {
+        alert("Tu carrito está vacío.");
+        return;
+      }
+
+      const mensaje = encodeURIComponent(
+        "Hola quiero realizar el pago de estos productos:\n" +
+        carrito.map(p => `- ${p.nombre} - ${p.precio}`).join('\n') +
+        "\n\n¿Cuáles son los métodos de pago por favor?"
+      );
+      window.open(`https://wa.me/573151774787?text=${mensaje}`, '_blank');
+    }
+
+    window.comprarAhora = comprarAhora;
+    window.agregarAlCarrito = agregarAlCarrito;
+  </script>
+</body>
+</html>
