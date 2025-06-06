@@ -818,5 +818,22 @@ body {
   }
 }
 
+/*imagenes pequeñas*/
+
+@media (max-width: 600px) {
+  .page-section {
+    flex-direction: column !important;
+    padding: 1rem;
+  }
+
+  .page-section > div {
+    max-width: 100% !important;
+  }
+
+  .page-section img {
+    width: 100% !important;
+    height: auto;
+  }
+}
 
 
