@@ -24,32 +24,31 @@
     </nav>
   </header>
 
-  <main class="page-section" style="display: flex; flex-wrap: wrap; gap: 3rem; justify-content: center;">
-    <div style="flex: 1; max-width: 600px;">
-      <img id="imagen-producto" src="" alt="Producto" style="width: 100%; border-radius: 12px;" />
+  <main class="page-section product-container" style="display: flex; flex-wrap: wrap; gap: 3rem; justify-content: center;">
+    <div class="product-container" style="flex: 1; max-width: 600px;">
+    <img id="imagen-producto" src="IMG/tercera imagen.png" alt="Producto" class="product-image" />
     </div>
+    <div class="product-container" style="flex: 1; max-width: 600px;">
+    <h1 id="titulo-producto">Camiseta Dragón</h1>
+    <p id="descripcion-producto"></p>
+    <p><strong>Precio:</strong> <span id="precio-producto"></span></p>
+    <p><strong>Material:</strong> Algodón premium</p>
+    <p><strong>Tallas:</strong> XS - XXXL</p>
+    
+    <label for="talla">Selecciona tu talla:</label>
+    <select id="talla">
+      <option value="">-- Seleccionar --</option>
+      <option>XS</option>
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+      <option>XXL</option>
+    </select>
 
-    <div style="flex: 1; max-width: 600px;">
-      <h1 id="titulo-producto"></h1>
-      <p id="descripcion-producto"></p>
-      <p><strong>Precio:</strong> <span id="precio-producto"></span></p>
-      <p><strong>Material:</strong></p>
-      <div id="materiales-container" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;"></div>
-
-      <p id="tamaño-producto" style="display:none;"></p>
-
-      <p id="titulo-tallas"><strong>Tallas:</strong></p>
-      <div id="tallas-container" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;"></div>
-
-      <p><strong>Colores:</strong></p>
-      <div id="colores-container" style="display: flex; flex-wrap: wrap; gap: 0.5rem;"></div>
-
-      <p id="titulo-forma" style="display: none;"><strong>Forma:</strong></p>
-      <div id="forma-container" style="display: none; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;"></div>
-
-      <p style="color: #70f6f2;">Pedidos en Bogotá son contra entrega</p>
-      <button class="cta" onclick="comprarAhora()">Comprar Ahora</button>
-      <button class="cta" onclick="agregarAlCarrito()">Agregar al Carrito</button>
+    <p style="color: #70f6f2;">Pedidos en Bogotá son contra entrega</p>
+    <button class="cta" onclick="comprarAhora()">Comprar Ahora</button>
+    <button class="cta" onclick="agregarAlCarrito()">Agregar al Carrito</button>
     </div>
   </main>
 
