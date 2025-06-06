@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personaliza tu Camiseta - Neón Oni</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="branding">
+      <img src="IMG/LOGO NEON ONI.png" alt="Logo Neón Oni" />
+      <span class="titulo-japones">ネオン鬼</span>
+    </div>
+    <nav>
+      <div class="carrito-icono-container">
+        <img src="IMG/CARRITO BLANCO.png" alt="Carrito" id="icono-carrito" />
+        <span id="contador-carrito">0</span>
+      </div>
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="#contacto" class="btn">Contáctanos</a>
+    </nav>
+  </header>
+
+  <main class="page-section" style="display: flex; flex-wrap: wrap; gap: 3rem; justify-content: center;">
+    <div style="flex: 1; max-width: 600px;">
+      <img src="IMG/cuarta imagen.png" alt="Camiseta personalizada" style="width: 100%; border-radius: 12px;" />
+    </div>
+
+    <div style="flex: 1; max-width: 600px;">
+      <h1>Personaliza tu Camiseta</h1>
+      <p style="font-size: 1.1rem;">Selecciona el tipo de material, talla y color de tu preferencia.</p>
+
+      <!-- Tipo de material -->
+      <div style="margin: 1rem 0;">
+        <p><strong>Tipo de Material:</strong></p>
+        <button class="option-btn" onclick="seleccionarMaterial('Burda PREMIUM', 80000)">Burda PREMIUM - $80.000</button>
+        <button class="option-btn" onclick="mostrarEstandar()">STÁNDAR</button>
+      </div>
+
+      <!-- Materiales estándar -->
+      <div id="materiales-standar" style="display: none; margin-bottom: 1rem;">
+        <button class="option-btn" onclick="seleccionarMaterial('Peruano', 60000)">Material Peruano - $60.000</button>
+        <button class="option-btn" onclick="seleccionarMaterial('Algodón Licrado', 55000)">Algodón Licrado - $55.000</button>
+        <button class="option-btn" onclick="seleccionarMaterial('Piel de Durazno', 30000)">Piel de Durazno - $30.000</button>
+      </div>
+
+      <!-- Tallas -->
+      <div style="margin: 1rem 0;">
+        <p><strong>Talla:</strong></p>
+        <div id="tallas">
+          <button class="option-btn" onclick="seleccionarTalla('S')">S</button>
+          <button class="option-btn" onclick="seleccionarTalla('M')">M</button>
+          <button class="option-btn" onclick="seleccionarTalla('L')">L</button>
+          <button class="option-btn" onclick="seleccionarTalla('XL')">XL</button>
+        </div>
+      </div>
+
+      <!-- Colores dinámicos -->
+      <div style="margin: 1rem 0;">
+        <p><strong>Color:</strong></p>
+        <div id="colores"></div>
+      </div>
+
+      <!-- Advertencia -->
+      <div style="margin: 1.5rem 0; background: #1c1c1c; padding: 1rem; border-left: 4px solid #ff278e; border-radius: 8px;">
+        <p style="color: #ff278e; font-weight: bold; font-size: 1.1rem;">ADVERTENCIA</p>
+        <ul style="padding-left: 1rem; color: #ccc;">
+          <li>No se pueden estampar pantallazos.</li>
+          <li>No pueden ser imágenes de baja calidad.</li>
+          <li>Si tienes dudas o inquietudes escríbenos a: <br><a href="mailto:neon.oni.squad@gmail.com" style="color:#70f6f2;">neon.oni.squad@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <!-- Botón solicitar -->
+      <button class="cta" onclick="enviarPersonalizacion()">SOLICITAR</button>
+      <p style="margin-top: 1rem; color: #70f6f2;">Pedidos en Bogotá son contra entrega</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Neon Oni. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    let materialSeleccionado = "";
+    let precioSeleccionado = 0;
+    let colorSeleccionado = "";
+    let tallaSeleccionada = "";
+
+    const coloresPorMaterial = {
+      "Burda PREMIUM": {
+        disponibles: ["Negro", "Blanco", "Azul Petroleo"],
+        agotados: ["Rojo", "Camel", "Marfil", "Arena", "Verde Militar"]
+      },
+      "Peruano": {
+        disponibles: ["Negro", "Rojo", "Verde Militar", "Camel"],
+        agotados: ["Blanco", "Azul Petroleo", "Marfil", "Arena"]
+      },
+      "Algodón Licrado": {
+        disponibles: ["Negro", "Blanco", "Rojo", "Marfil"],
+        agotados: ["Azul Petroleo", "Verde Militar", "Arena", "Camel"]
+      },
+      "Piel de Durazno": {
+        disponibles: ["Azul Petroleo", "Arena"],
+        agotados: ["Negro", "Blanco", "Rojo", "Verde Militar", "Camel", "Marfil"]
+      }
+    };
+
+    function mostrarEstandar() {
+      document.getElementById("materiales-standar").style.display = "block";
+    }
+
+    function seleccionarMaterial(nombre, precio) {
+      materialSeleccionado = nombre;
+      precioSeleccionado = precio;
+      document.querySelectorAll('.option-btn').forEach(btn => btn.classList.remove('selected'));
+      event.target.classList.add('selected');
+      cargarColores(nombre);
+    }
+
+    function seleccionarTalla(talla) {
+      tallaSeleccionada = talla;
+      document.querySelectorAll('#tallas .option-btn').forEach(btn => btn.classList.remove('selected'));
+      event.target.classList.add('selected');
+    }
+
+    function seleccionarColor(color) {
+      colorSeleccionado = color;
+      document.querySelectorAll('.color-btn').forEach(btn => btn.classList.remove('selected'));
+      event.target.classList.add('selected');
+    }
+
+    function cargarColores(material) {
+      const contenedor = document.getElementById("colores");
+      contenedor.innerHTML = "";
+      const data = coloresPorMaterial[material];
+
+      data.disponibles.forEach(color => {
+        const btn = document.createElement("button");
+        btn.className = "color-btn";
+        btn.textContent = color;
+        btn.onclick = () => seleccionarColor(color);
+        contenedor.appendChild(btn);
+      });
+
+      data.agotados.forEach(color => {
+        const btn = document.createElement("button");
+        btn.className = "color-btn agotado";
+        btn.textContent = `${color} (Agotado)`;
+        btn.disabled = true;
+        contenedor.appendChild(btn);
+      });
+    }
+
+    function enviarPersonalizacion() {
+      if (!materialSeleccionado || !colorSeleccionado || !tallaSeleccionada) {
+        alert("Por favor selecciona material, talla y color.");
+        return;
+      }
+
+      const mensaje = `¡Hola! Quiero personalizar una camiseta con el siguiente material: *${materialSeleccionado}* ($${precioSeleccionado}), talla: *${tallaSeleccionada}*, color: *${colorSeleccionado}*. Adjunto la imagen que deseo estampar.`;
+      const url = `https://wa.me/573151774787?text=${encodeURIComponent(mensaje)}`;
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>
