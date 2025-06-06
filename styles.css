@@ -818,22 +818,30 @@ body {
   }
 }
 
-/*imagenes pequeñas*/
+.product-image {
+  width: 100%;
+  max-width: 400px; /* Tamaño máximo razonable */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 
+/* Asegura que el contenedor también se adapte */
+.product-container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Ajuste adicional para pantallas pequeñas */
 @media (max-width: 600px) {
-  .page-section {
-    flex-direction: column !important;
-    padding: 1rem;
+  .product-image {
+    max-width: 90vw;
   }
+}
 
-  .page-section > div {
-    max-width: 100% !important;
-  }
-
-  .page-section img {
-    width: 100% !important;
-    height: auto;
-  }
 }
 
 
