@@ -842,6 +842,29 @@ body {
   }
 }
 
+
+
+/*PRUEBA DE SI FUNCIONA PARA ESCRITORIO NORMAL*/
+
+@media (max-width: 600px) {
+  .page-section {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .page-section > div {
+    max-width: 100%;
+    flex: none;
+  }
+
+  .page-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+
+
 }
 
 
