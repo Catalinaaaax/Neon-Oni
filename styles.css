@@ -793,10 +793,11 @@ body {
   }
 
   .navbar nav {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    gap: 0.5rem;
+    gap: 1rem; /* Espacio entre iconos y enlaces, puedes ajustar el valor */
     margin-top: 1rem;
   }
 
@@ -811,7 +812,9 @@ body {
   .carrito-icono-container {
     align-self: flex-end;
     margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
+}
 }
 
 
