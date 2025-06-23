@@ -103,7 +103,84 @@ export const todosLosProductos = [
     ],
     tallas: ["S", "M", "L", "XL", "XXL"],
     colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
-  }
+  },
+   {
+    id: 10,
+    nombre: "Pad Mouse Gamer de Naruto",
+    precio: "$30.000",
+    descripcion: "Mouse pad con diseño japonés. Elige entre forma redonda o rectangular.",
+    imagen: "IMG/Naruto.jpg",
+    tipo: "accesorios",
+    material: "Acrílico resistente",
+    colores: ["Personalizado"],
+    forma: ["Redondo 20x20", "Rectangular 18x22"]
+  },
+    {
+    id: 11,
+    nombre: "Pad Mouse de Pikachu",
+    precio: "$15.000",
+    descripcion: "Mouse pad con diseño japonés. Elige entre forma redonda o rectangular.",
+    imagen: "IMG/Picachu.png",
+    tipo: "accesorios",
+    material: "Acrílico resistente",
+    colores: ["Personalizado"],
+    forma: ["Redondo 20x20", "Rectangular 18x22"]
+  },
+   {
+    id: 12,
+    nombre: "Pad Mouse de Death Note",
+    precio: "$15.000",
+    descripcion: "Mouse pad con diseño japonés. Elige entre forma redonda o rectangular.",
+    imagen: "IMG/Death Note1.png",
+    tipo: "accesorios",
+    material: "Acrílico resistente",
+    colores: ["Personalizado"],
+    forma: ["Redondo 20x20", "Rectangular 18x22"]
+  },
+  {
+    id: 13,
+    nombre: "Pad Mouse de Dragon Ball",
+    precio: "$15.000",
+    descripcion: "Mouse pad con diseño japonés. Elige entre forma redonda o rectangular.",
+    imagen: "IMG/Goku.png",
+    tipo: "accesorios",
+    material: "Acrílico resistente",
+    colores: ["Personalizado"],
+    forma: ["Redondo 20x20", "Rectangular 18x22"]
+  },
+    {
+    id: 14,
+    nombre: "Pad Mouse de One Piece",
+    precio: "$15.000",
+    descripcion: "Mouse pad con diseño japonés. Elige entre forma redonda o rectangular.",
+    imagen: "IMG/One Piece.png",
+    tipo: "accesorios",
+    material: "Acrílico resistente",
+    colores: ["Personalizado"],
+    forma: ["Redondo 20x20", "Rectangular 18x22"]
+  },
+    {
+    id: 15,
+    nombre: "Pad Mouse de Stitch",
+    precio: "$15.000",
+    descripcion: "Mouse pad con diseño japonés. Elige entre forma redonda o rectangular.",
+    imagen: "IMG/Stich.png",
+    tipo: "accesorios",
+    material: "Acrílico resistente",
+    colores: ["Personalizado"],
+    forma: ["Redondo 20x20", "Rectangular 18x22"]
+  },
+    {
+    id: 16,
+    nombre: "Pad Mouse de Naruto",
+    precio: "$15.000",
+    descripcion: "Mouse pad con diseño japonés. Elige entre forma redonda o rectangular.",
+    imagen: "IMG/Naruto1.png",
+    tipo: "accesorios",
+    material: "Acrílico resistente",
+    colores: ["Personalizado"],
+    forma: ["Redondo 20x20", "Rectangular 18x22"]
+  },
 ];
 let carrito = [];
 // Función para filtrar productos según el tipo
