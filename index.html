@@ -225,54 +225,50 @@
   </footer>
 
   <script>
+    // Se ejecuta cuando el contenido de la página se ha cargado completamente.
+    document.addEventListener('DOMContentLoaded', () => {
+      // --- Lógica del Carrito ---
+      // Actualiza el contador del carrito al cargar la página.
+      const carritoGuardado = JSON.parse(localStorage.getItem("carrito") || "[]");
+      const contadorCarrito = document.getElementById("contador-carrito");
+      if (contadorCarrito) {
+        contadorCarrito.textContent = carritoGuardado.length;
+      }
+
+      // --- Lógica del Carrusel de Reseñas ---
+      const prevButton = document.querySelector(".carousel-btn.prev");
+      const nextButton = document.querySelector(".carousel-btn.next");
+      const track = document.querySelector(".carousel-track");
+
+      if (prevButton && nextButton && track) {
+        prevButton.addEventListener("click", () => {
+          track.scrollBy({ left: -300, behavior: "smooth" });
+        });
+
+        nextButton.addEventListener("click", () => {
+          track.scrollBy({ left: 300, behavior: "smooth" });
+        });
+      }
+    });
+
+    // --- Lógica del Formulario de Contacto ---
+    // Esta función es llamada por el `onsubmit` del formulario.
     function enviarFormulario(event) {
       event.preventDefault();
-      const nombre = document.getElementById("nombre").value;
-      const telefono = document.getElementById("telefono").value;
-      const mensaje = document.getElementById("mensaje").value;
-  
-      const texto = `Hola, soy ${nombre}. Mi número es ${telefono}. Mensaje: ${mensaje}`;
-      const url = `https://wa.me/573151774787?text=${encodeURIComponent(texto)}`;
-      window.open(url, "_blank");
-  
-      document.getElementById("confirmacion").style.display = "block";
-      setTimeout(() => {
-        document.getElementById("confirmacion").style.display = "none";
-      }, 4000);
-    }
 
-    document.querySelector(".carousel-btn.prev").addEventListener("click", () => {
-    document.querySelector(".carousel-track").scrollBy({
-      left: -300,
-      behavior: "smooth"
-    });
-  });
-
-  document.querySelector(".carousel-btn.next").addEventListener("click", () => {
-    document.querySelector(".carousel-track").scrollBy({
-      left: 300,
-      behavior: "smooth"
-    });
-  });
-  </script>
-
-<script>
-    function enviarFormulario(event) {
-      event.preventDefault();
-      
       const nombre = document.getElementById("nombre").value.trim();
       const telefono = document.getElementById("telefono").value.trim();
       const mensaje = document.getElementById("mensaje").value.trim();
-  
+
       if (!nombre || !telefono || !mensaje) {
         alert("Por favor, completa todos los campos.");
         return;
       }
-  
+
       const texto = `Hola, soy ${nombre}. Mi número es ${telefono}. Mensaje: ${mensaje}`;
       const url = `https://wa.me/573151774787?text=${encodeURIComponent(texto)}`;
       window.open(url, "_blank");
-  
+
       // Mostrar mensaje de confirmación temporal
       const confirmacion = document.getElementById("confirmacion");
       confirmacion.style.display = "block";
@@ -281,29 +277,6 @@
       }, 4000);
     }
   </script>
-
-  <script>
-    const carrito = [];
-  
-    function agregarAlCarrito(nombre, precio) {
-  carrito.push({ nombre, precio });
-  alert(`${nombre} agregado al carrito.`);
-  actualizarVistaCarrito();
-  actualizarContador();
-}
-
-function eliminarDelCarrito(index) {
-  carrito.splice(index, 1);
-  actualizarVistaCarrito();
-  actualizarContador();
-}
-
-function actualizarContador() {
-  document.getElementById("contador-carrito").innerText = carrito.length;
-}
-  </script>
-  
-<script type="module" src="productos.js"></script>
   
 </body>
 
