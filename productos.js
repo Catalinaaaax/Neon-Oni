@@ -13,6 +13,7 @@ export const todosLosProductos = [
     tallas: ["S", "M", "L", "XL"],
     colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
   },
+  
   {
     id: 2,
     nombre: "Hoddie Haruto",
