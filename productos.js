@@ -2,11 +2,14 @@ export const todosLosProductos = [
   {
     id: 1,
     nombre: "Camiseta Oversize- Sekushīna geisha",
-    precio: "$80.000 COP",
-    descripcion: "Camiseta Oversize, de material Burda, con un diseño unico estilo Oni",
+    materiales: [
+      { nombre: "Burda", precio: "$65.000" },
+      { nombre: "Scuba", precio: "$55.000" },
+      { nombre: "Algodón licrado", precio: "$35.000" }
+    ],
+    descripcion: "Camiseta Oversize con un diseño unico estilo Oni, disponible en diferentes materiales.",
     imagen: "IMG/cuarta imagen.png",
     tipo: "camisetas",
-    material: "Burda",
     tallas: ["S", "M", "L", "XL"],
     colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
   },
@@ -14,8 +17,8 @@ export const todosLosProductos = [
     id: 2,
     nombre: "Hoddie Haruto",
     materiales: [
-      { nombre: "Monaco", precio: "$90.000" },
-      { nombre: "Antártico Licrado", precio: "$105.000" }
+      { nombre: "Monaco", precio: "$85.000" },
+      { nombre: "Antártico Licrado", precio: "$85.000" }
     ],
     descripcion: "Hoodie cálido y resistente, con diseño japonés.",
     imagen: "IMG/Hoodie 1.jpg",
@@ -26,7 +29,7 @@ export const todosLosProductos = [
   {
     id: 3,
     nombre: "Pad Mouse Gamer",
-    precio: "$30.000",
+    precio: "$25.000",
     descripcion: "Accesorio moderno, edición limitada.",
     imagen: "IMG/Pad mouse 1.jpg",
     tipo: "accesorios",
@@ -37,11 +40,14 @@ export const todosLosProductos = [
   {
     id: 4,
     nombre: "Camiseta Oversize - Geisha oni",
-    precio: "$80.000",
+    materiales: [
+      { nombre: "Burda", precio: "$65.000" },
+      { nombre: "Scuba", precio: "$55.000" },
+      { nombre: "Algodón licrado", precio: "$35.000" }
+    ],
     descripcion: "Misteriosa profundidad del universo; belleza sutil que no puede describirse con palabras.",
     imagen: "IMG/tercera imagen.png",
     tipo: "camisetas",
-    material: "Burda",
     tallas: ["S", "M", "L", "XL"],
     colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
   },
@@ -49,8 +55,8 @@ export const todosLosProductos = [
     id: 5,
     nombre: "Hoodie Negro Oni",
     materiales: [
-      { nombre: "Monaco", precio: "$90.000" },
-      { nombre: "Antártico Licrado", precio: "$105.000" }
+      { nombre: "Monaco", precio: "$85.000" },
+      { nombre: "Antártico Licrado", precio: "$85.000" }
     ],
     descripcion: "Hoodie Negro con diseño Oni de edición limitada.",
     imagen: "IMG/Hoodie 3.jpg",
@@ -72,22 +78,28 @@ export const todosLosProductos = [
   {
     id: 7,
     nombre: "Camiseta Oversize - Oni Original",
-    precio: "$80.000",
+    materiales: [
+      { nombre: "Burda", precio: "$65.000" },
+      { nombre: "Scuba", precio: "$55.000" },
+      { nombre: "Algodón licrado", precio: "$35.000" }
+    ],
     descripcion: "Camiseta Original de Oni, de material Burda, con un diseño unico estilo Oni",
     imagen: "IMG/Quinta imagen.jpeg",
     tipo: "camisetas",
-    material: "Burda",
     tallas: ["S", "M", "L", "XL"],
     colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
   },
   {
     id: 8,
     nombre: "Camiseta Oversize - Kōri no Kokoro",
-    precio: "$80.000",
+    materiales: [
+      { nombre: "Burda", precio: "$65.000" },
+      { nombre: "Scuba", precio: "$55.000" },
+      { nombre: "Algodón licrado", precio: "$35.000" }
+    ],
     descripcion: "Camiseta Original de Oni, de material Burda, con un diseño unico estilo Oni.",
     imagen: "IMG/Sexta imagen.jpeg",
     tipo: "camisetas",
-    material: "Burda",
     tallas: ["S", "M", "L", "XL"],
     colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
   },
@@ -98,8 +110,8 @@ export const todosLosProductos = [
     imagen: "IMG/Hoodie 2.jpg",
     tipo: "hoodies",
     materiales: [
-      { nombre: "Monaco", precio: "$90.000" },
-      { nombre: "Antartido licrado", precio: "$105.000" }
+      { nombre: "Monaco", precio: "$85.000" },
+      { nombre: "Antartido licrado", precio: "$85.000" }
     ],
     tallas: ["S", "M", "L", "XL", "XXL"],
     colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
@@ -107,13 +119,13 @@ export const todosLosProductos = [
    {
     id: 10,
     nombre: "Pad Mouse Gamer de Naruto",
-    precio: "$30.000",
+    precio: "$25.000",
     descripcion: "Mouse pad con diseño japonés. Elige entre forma redonda o rectangular.",
     imagen: "IMG/Naruto.jpg",
     tipo: "accesorios",
     material: "Acrílico resistente",
     colores: ["Personalizado"],
-    forma: ["Redondo 20x20", "Rectangular 18x22"]
+    forma: ["Rectangular 20x50"]
   },
     {
     id: 11,
@@ -192,14 +204,38 @@ function filtrarProductos(tipo) {
   const filtrados = tipo ? todosLosProductos.filter(p => p.tipo === tipo) : todosLosProductos;
 
   filtrados.forEach(producto => {
+    let precioParaMostrar;
+    let nombreParaCarrito;
+    let precioParaCarrito;
+
+    if (producto.materiales && producto.materiales.length > 0) {
+      const parsePrice = (priceStr) => parseInt(String(priceStr).replace(/\$|\./g, ''), 10);
+
+      // Encontrar el material con el precio más bajo
+      const materialMasBarato = producto.materiales.reduce((min, current) => {
+        return parsePrice(current.precio) < parsePrice(min.precio) ? current : min;
+      }, producto.materiales[0]);
+
+      precioParaMostrar = `Desde ${materialMasBarato.precio}`;
+      nombreParaCarrito = `${producto.nombre} (${materialMasBarato.nombre})`;
+      precioParaCarrito = materialMasBarato.precio;
+    } else {
+      precioParaMostrar = producto.precio;
+      nombreParaCarrito = producto.nombre;
+      precioParaCarrito = producto.precio;
+    }
+
+    const safeCartName = nombreParaCarrito.replace(/'/g, "\\'");
+    const safeCartPrice = String(precioParaCarrito || '').replace(/'/g, "\\'");
+
     const item = document.createElement("a");
     item.href = `compra.html?producto=${producto.id}`;
     item.className = "product-item";
     item.innerHTML = `
       <img src="${producto.imagen}" alt="${producto.nombre}">
       <p>${producto.nombre}</p>
-      <p>${producto.precio}</p>
-      <button class="cta" onclick="event.preventDefault(); agregarAlCarrito('${producto.nombre}', '${producto.precio}')">Agregar al carrito</button>
+      <p>${precioParaMostrar}</p>
+      <button class="cta" onclick="event.preventDefault(); agregarAlCarrito('${safeCartName}', '${safeCartPrice}')">Agregar al carrito</button>
     `;
     contenedor.appendChild(item);
   });
