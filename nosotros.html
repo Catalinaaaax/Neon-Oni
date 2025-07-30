@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nosotros - Neón Oni</title>
   <link rel="stylesheet" href="styles.css" />
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 
 <body>
@@ -23,41 +25,64 @@
       <a href="index.html">Inicio</a>
       <a href="productos.html">Productos</a>
       <a href="nosotros.html" class="active">Nosotros</a>
-      <a href="index.html#contacto" class="btn">Contáctanos</a>
+      <a href="https://wa.me/573151774787?text=Hola,%20vengo%20de%20la%20página%20web%20y%20me%20gustaría%20obtener%20más%20información." target="_blank" class="btn">Contáctanos</a>
     </nav>
   </header>
 
-<main class="nosotros-section">
-  <h1 style="text-align: center; font-size: 2.5rem; margin-bottom: 2rem;">Nosotros</h1>
-
-  <section style="max-width: 900px; margin: 0 auto; line-height: 1.8;">
-    <h2>Nuestra Historia</h2>
-    <p>
-      En <strong>Neon Oni (ネオン鬼)</strong> nace de la fusión entre la tradición japonesa y el estilo urbano contemporáneo.
-      Somos un emprendimiento familiar que transforma pasión por el anime, el cómic y la estética samurái en prendas de alta calidad y diseño único.
-    </p>
-    <p>
-      Cada prenda es creada para quienes desafían lo común y buscan destacarse con actitud.
-      No vendemos ropa, creamos cultura.
-      Bienvenido al Oni Squad.
-    </p>
-
-    <h2 style="margin-top: 2rem;">Nuestros Valores</h2>
-    <ul style="margin-left: 1.2rem;">
-      <li>Calidad premium en cada prenda</li>
-      <li>Diseños auténticos</li>
-      <li>Ediciones limitadas y exclusivas</li>
-      <li>Cumplimiento y compromiso</li>
-    </ul>
-
-    <div style="margin-top: 3rem; text-align: center;">
-      <p style="font-size: 1.2rem; color: #70f6f2;"><strong>Viste diferente. Sé parte del Oni Squad.</strong></p>
-      <button class="cta" onclick="window.location.href='productos.html'">Explorar Productos</button>
+  <!-- Hero Section -->
+  <section class="nosotros-hero">
+    <div class="overlay">
+      <h1 class="hero-title">Conoce al Oni Squad</h1>
+      <p class="hero-subtitle">La historia detrás de la máscara.</p>
     </div>
   </section>
-</main>
 
+  <main class="nosotros-main-content">
+    <div class="content-wrapper">
+      <!-- Historia -->
+      <section class="historia-container">
+        <div class="historia-img">
+          <!-- Te recomiendo usar una imagen tuya aquí, por ejemplo, del taller o del equipo -->
+          <img src="IMG/segunda imagen.jpg" alt="Equipo Neón Oni" />
+        </div>
+        <div class="historia-texto">
+          <h2>Nuestra Historia</h2>
+          <p>
+            <strong>Neon Oni (ネオン鬼)</strong> nace de la fusión entre la tradición japonesa y el estilo urbano contemporáneo.
+            Somos un emprendimiento familiar que transforma la pasión por el anime, el cómic y la estética samurái en prendas de alta calidad y diseño único.
+          </p>
+          <p>
+            Cada prenda es creada para quienes desafían lo común y buscan destacarse con actitud.
+            No vendemos ropa, creamos cultura. Bienvenido al Oni Squad.
+          </p>
+        </div>
+      </section>
 
+      <!-- Valores -->
+      <section class="valores-section">
+        <h2>Nuestros Pilares</h2>
+        <p class="valores-intro">Estos son los principios que guían cada uno de nuestros diseños y acciones.</p>
+        <div class="valores-grid">
+          <div class="valor-card">
+            <i class="fas fa-gem"></i>
+            <h3>Calidad Premium</h3>
+          </div>
+          <div class="valor-card">
+            <i class="fas fa-paint-brush"></i>
+            <h3>Diseños Auténticos</h3>
+          </div>
+          <div class="valor-card">
+            <i class="fas fa-star"></i>
+            <h3>Ediciones Exclusivas</h3>
+          </div>
+          <div class="valor-card">
+            <i class="fas fa-handshake"></i>
+            <h3>Compromiso Total</h3>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
 
 
   <footer>

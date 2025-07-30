@@ -7,6 +7,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Neón Oni</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Estilos para el botón flotante de WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 40px;
+      right: 40px;
+      background-color: #25d366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+    .whatsapp-float:hover {
+        transform: scale(1.1);
+    }
+  </style>
 </head>
 
 <body>
@@ -24,7 +48,7 @@
       <a href="index.html">Inicio</a>
       <a href="productos.html">Productos</a>
       <a href="nosotros.html">Nosotros</a>
-      <a href="#contacto" class="btn">Contáctanos</a>
+      <a href="https://wa.me/573151774787?text=Hola,%20vengo%20de%20la%20página%20web%20y%20me%20gustaría%20obtener%20más%20información." target="_blank" class="btn">Contáctanos</a>
     </nav>
   </header>
 
@@ -200,25 +224,10 @@
         </div>
       </section>
 
-  <!--FORMULARIO PARA CONTACTO-->
-  <section id="contacto" class="contact-section">
-    <h2>Contáctanos</h2>
-  
-    <form class="contact-form" onsubmit="enviarFormulario(event)">
-      <div class="input-group">
-        <input type="text" id="nombre" placeholder="Nombre" required />
-      </div>
-      <div class="input-group">
-        <input type="tel" id="telefono" placeholder="Teléfono" required />
-      </div>
-      <div class="input-group">
-        <textarea id="mensaje" placeholder="Tu mensaje..." required></textarea>
-      </div>
-      <button type="submit">Enviar</button>
-      <p class="confirmation-message" id="confirmacion">¡Mensaje enviado correctamente!</p>
-    </form>
-  </section>
-  
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/573151774787?text=Hola,%20vengo%20de%20la%20página%20web%20y%20me%20gustaría%20obtener%20más%20información." class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png" alt="Contactar por WhatsApp" style="width: 35px; height: 35px;">
+  </a>
   
   <footer>
     <p>© 2025 Neon Oni. Todos los derechos reservados.</p>
@@ -251,35 +260,9 @@
       }
     });
 
-    // --- Lógica del Formulario de Contacto ---
-    // Esta función es llamada por el `onsubmit` del formulario.
-    function enviarFormulario(event) {
-      event.preventDefault();
-
-      const nombre = document.getElementById("nombre").value.trim();
-      const telefono = document.getElementById("telefono").value.trim();
-      const mensaje = document.getElementById("mensaje").value.trim();
-
-      if (!nombre || !telefono || !mensaje) {
-        alert("Por favor, completa todos los campos.");
-        return;
-      }
-
-      const texto = `Hola, soy ${nombre}. Mi número es ${telefono}. Mensaje: ${mensaje}`;
-      const url = `https://wa.me/573151774787?text=${encodeURIComponent(texto)}`;
-      window.open(url, "_blank");
-
-      // Mostrar mensaje de confirmación temporal
-      const confirmacion = document.getElementById("confirmacion");
-      confirmacion.style.display = "block";
-      setTimeout(() => {
-        confirmacion.style.display = "none";
-      }, 4000);
-    }
   </script>
   
 </body>
 
 
 </html>
-
