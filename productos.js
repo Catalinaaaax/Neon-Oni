@@ -250,6 +250,32 @@ export const todosLosProductos = [
     tallas: ["S", "M", "L", "XL"],
     colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
   },
+  {
+    id: 21,
+    nombre: "Hoodie - Nezuko",
+    descripcion: "Hoodie único nezuko, cálido y resistente",
+    imagen: "IMG/Hoodie Nezuko.jpeg",
+    tipo: "hoodies",
+    materiales: [
+      { nombre: "Monaco", precio: "$85.000" },
+      { nombre: "Antartido licrado", precio: "$85.000" }
+    ],
+    tallas: ["S", "M", "L", "XL", "XXL"],
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+  },
+  {
+    id: 21,
+    nombre: "Hoodie - Nezuko",
+    descripcion: "Hoodie único nezuko, cálido y resistente",
+    imagen: "IMG/Hoodie Nezuko 2.jpeg",
+    tipo: "hoodies",
+    materiales: [
+      { nombre: "Monaco", precio: "$85.000" },
+      { nombre: "Antartido licrado", precio: "$85.000" }
+    ],
+    tallas: ["S", "M", "L", "XL", "XXL"],
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+  },
 ];
 let carrito = [];
 // Función para filtrar productos según el tipo
