@@ -194,6 +194,62 @@ export const todosLosProductos = [
     colores: ["Personalizado"],
     forma: ["Redondo 20x20", "Rectangular 18x22"]
   },
+  {
+    id: 17,
+    nombre: "Camiseta Oversize - zoro",
+    materiales: [
+      { nombre: "Burda", precio: "$65.000" },
+      { nombre: "Scuba", precio: "$55.000" },
+      { nombre: "Algodón licrado", precio: "$35.000" }
+    ],
+    descripcion: "Camiseta de Zoro, única y fabulosa.",
+    imagen: "IMG/Camiseta zoro.jpeg",
+    tipo: "camisetas",
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+  },
+  {
+    id: 18,
+    nombre: "Camiseta Oversize - Luna Demon Slayer",
+    materiales: [
+      { nombre: "Burda", precio: "$65.000" },
+      { nombre: "Scuba", precio: "$55.000" },
+      { nombre: "Algodón licrado", precio: "$35.000" }
+    ],
+    descripcion: "Camiseta de Zoro, única y fabulosa.",
+    imagen: "IMG/Camiseta Luna Demon Slayer.jpeg",
+    tipo: "camisetas",
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+  },
+  {
+    id: 19,
+    nombre: "Camiseta Oversize - Tanjiro",
+    materiales: [
+      { nombre: "Burda", precio: "$65.000" },
+      { nombre: "Scuba", precio: "$55.000" },
+      { nombre: "Algodón licrado", precio: "$35.000" }
+    ],
+    descripcion: "Camiseta de Tanjiro, única y fabulosa.",
+    imagen: "IMG/Camiseta Tanjiro.jpeg",
+    tipo: "camisetas",
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+  },
+  {
+    id: 20,
+    nombre: "Camiseta Oversize - Luna Demon Slayer",
+    materiales: [
+      { nombre: "Burda", precio: "$65.000" },
+      { nombre: "Scuba", precio: "$55.000" },
+      { nombre: "Algodón licrado", precio: "$35.000" }
+    ],
+    descripcion: "Camiseta de Tanjiro, única y fabulosa.",
+    imagen: "IMG/Camiseta Luna Demon Slayer 2.jpeg",
+    tipo: "camisetas",
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+  },
 ];
 let carrito = [];
 // Función para filtrar productos según el tipo
