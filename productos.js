@@ -276,6 +276,91 @@ export const todosLosProductos = [
     tallas: ["S", "M", "L", "XL", "XXL"],
     colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
   },
+  {
+    id: 22,
+    nombre: "Camiseta Oversize - Inosuke Hashibira",
+    materiales: [
+      { nombre: "Burda", precio: "$65.000" },
+      { nombre: "Scuba", precio: "$55.000" },
+      { nombre: "Algodón licrado", precio: "$35.000" }
+    ],
+    descripcion: "Camiseta de Inosuke Hashibira, única y fabulosa.",
+    imagen: "IMG/Camiseta Inosuke Hashibira.png",
+    tipo: "camisetas",
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+  },
+  {
+    id: 23,
+    nombre: "Camiseta Oversize - Rengoku",
+    materiales: [
+      { nombre: "Burda", precio: "$65.000" },
+      { nombre: "Scuba", precio: "$55.000" },
+      { nombre: "Algodón licrado", precio: "$35.000" }
+    ],
+    descripcion: "Camiseta de Rengoku, única y fabulosa.",
+    imagen: "IMG/Camiseta Rengoku.png",
+    tipo: "camisetas",
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+  },
+  {
+    id: 24,
+    nombre: "Camiseta Oversize - shinobu kocho",
+    materiales: [
+      { nombre: "Burda", precio: "$65.000" },
+      { nombre: "Scuba", precio: "$55.000" },
+      { nombre: "Algodón licrado", precio: "$35.000" }
+    ],
+    descripcion: "Camiseta de shinobu kocho, única y fabulosa.",
+    imagen: "IMG/Camiseta shinobu kocho.png",
+    tipo: "camisetas",
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+  },
+  {
+    id: 25,
+    nombre: "Camiseta Oversize - Tanjiro",
+    materiales: [
+      { nombre: "Burda", precio: "$65.000" },
+      { nombre: "Scuba", precio: "$55.000" },
+      { nombre: "Algodón licrado", precio: "$35.000" }
+    ],
+    descripcion: "Camiseta de Tanjiro, única y fabulosa.",
+    imagen: "IMG/Camiseta Tanjiro 2.png",   
+    tipo: "camisetas",
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+  },
+  {
+    id: 26,
+    nombre: "Camiseta Oversize - Zenitsu Agatsuma",
+    materiales: [
+      { nombre: "Burda", precio: "$65.000" },
+      { nombre: "Scuba", precio: "$55.000" },
+      { nombre: "Algodón licrado", precio: "$35.000" }
+    ],
+    descripcion: "Camiseta de Zenitsu Agatsuma, única y fabulosa.",
+    imagen: "IMG/Camiseta Zenitsu Agatsuma.png",   
+    tipo: "camisetas",
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+  },
+  {
+    id: 27,
+    nombre: "Camiseta Oversize - Nezuko Kamado",
+    materiales: [
+      { nombre: "Burda", precio: "$65.000" },
+      { nombre: "Scuba", precio: "$55.000" },
+      { nombre: "Algodón licrado", precio: "$35.000" }
+    ],
+    descripcion: "Camiseta de Nezuko Kamado, única y fabulosa.",
+    imagen: "IMG/Nezuko Kamado.png",   
+    tipo: "camisetas",
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+  },
+
 ];
 let carrito = [];
 // Función para filtrar productos según el tipo
