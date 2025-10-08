@@ -27,14 +27,20 @@
   <main class="page-section" style="display: flex; flex-wrap: wrap; gap: 3rem; justify-content: center;">
     <div style="flex: 1; max-width: 600px;">
       <img src="IMG/cuarta imagen.png" alt="Camiseta personalizada" style="width: 100%; border-radius: 12px;" />
+  <main class="page-section custom-layout">
+    <div class="custom-column">
+      <img src="IMG/cuarta imagen.png" alt="Camiseta personalizada" class="custom-image" />
     </div>
 
     <div style="flex: 1; max-width: 600px;">
+    <div class="custom-column">
       <h1>Personaliza tu Camiseta</h1>
       <p style="font-size: 1.1rem;">Selecciona el tipo de material, talla y color de tu preferencia.</p>
+      <p class="custom-subtitle">Selecciona el tipo de material, talla y color de tu preferencia.</p>
 
       <!-- Tipo de material -->
       <div style="margin: 1rem 0;">
+      <div class="option-section">
         <p><strong>Tipo de Material:</strong></p>
         <button class="option-btn" onclick="seleccionarMaterial('Burda PREMIUM', 80000)">Burda PREMIUM - $80.000</button>
         <button class="option-btn" onclick="mostrarEstandar()">STÁNDAR</button>
@@ -42,6 +48,7 @@
 
       <!-- Materiales estándar -->
       <div id="materiales-standar" style="display: none; margin-bottom: 1rem;">
+      <div id="materiales-standar" class="hidden" style="margin-bottom: 1rem;">
         <button class="option-btn" onclick="seleccionarMaterial('Peruano', 60000)">Material Peruano - $60.000</button>
         <button class="option-btn" onclick="seleccionarMaterial('Algodón Licrado', 55000)">Algodón Licrado - $55.000</button>
         <button class="option-btn" onclick="seleccionarMaterial('Piel de Durazno', 30000)">Piel de Durazno - $30.000</button>
@@ -49,8 +56,10 @@
 
       <!-- Tallas -->
       <div style="margin: 1rem 0;">
+      <div class="option-section">
         <p><strong>Talla:</strong></p>
         <div id="tallas">
+        <div id="tallas" class="option-container">
           <button class="option-btn" onclick="seleccionarTalla('S')">S</button>
           <button class="option-btn" onclick="seleccionarTalla('M')">M</button>
           <button class="option-btn" onclick="seleccionarTalla('L')">L</button>
@@ -60,23 +69,30 @@
 
       <!-- Colores dinámicos -->
       <div style="margin: 1rem 0;">
+      <div class="option-section">
         <p><strong>Color:</strong></p>
         <div id="colores"></div>
+        <div id="colores" class="option-container"></div>
       </div>
 
       <!-- Advertencia -->
       <div style="margin: 1.5rem 0; background: #1c1c1c; padding: 1rem; border-left: 4px solid #ff278e; border-radius: 8px;">
         <p style="color: #ff278e; font-weight: bold; font-size: 1.1rem;">ADVERTENCIA</p>
         <ul style="padding-left: 1rem; color: #ccc;">
+      <div class="warning-box">
+        <p class="warning-title">ADVERTENCIA</p>
+        <ul class="warning-list">
           <li>No se pueden estampar pantallazos.</li>
           <li>No pueden ser imágenes de baja calidad.</li>
           <li>Si tienes dudas o inquietudes escríbenos a: <br><a href="mailto:neon.oni.squad@gmail.com" style="color:#70f6f2;">neon.oni.squad@gmail.com</a></li>
+          <li>Si tienes dudas o inquietudes escríbenos a: <br><a href="mailto:neon.oni.squad@gmail.com" class="email-link">neon.oni.squad@gmail.com</a></li>
         </ul>
       </div>
 
       <!-- Botón solicitar -->
       <button class="cta" onclick="enviarPersonalizacion()">SOLICITAR</button>
       <p style="margin-top: 1rem; color: #70f6f2;">Pedidos en Bogotá son contra entrega</p>
+      <p class="delivery-info">Pedidos en Bogotá son contra entrega</p>
     </div>
   </main>
 

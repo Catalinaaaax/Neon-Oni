@@ -332,20 +332,7 @@ export const todosLosProductos = [
     tallas: ["S", "M", "L", "XL"],
     colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
   },
-  {
-    id: 26,
-    nombre: "Camiseta Oversize - Zenitsu Agatsuma",
-    materiales: [
-      { nombre: "Burda", precio: "$65.000" },
-      { nombre: "Scuba", precio: "$55.000" },
-      { nombre: "Algodón licrado", precio: "$35.000" }
-    ],
-    descripcion: "Camiseta de Zenitsu Agatsuma, única y fabulosa.",
-    imagen: "IMG/Camiseta Zenitsu Agatsuma.png",   
-    tipo: "camisetas",
-    tallas: ["S", "M", "L", "XL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
-  },
+  
   {
     id: 27,
     nombre: "Camiseta Oversize - Nezuko Kamado",
@@ -360,10 +347,201 @@ export const todosLosProductos = [
     tallas: ["S", "M", "L", "XL"],
     colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
   },
-
+  {
+    id: 28,
+    nombre: "Camiseta Oversize - Máscara Oni",
+    materiales: [
+      { nombre: "Burda", precio: "$65.000" },
+      { nombre: "Scuba", precio: "$55.000" },
+      { nombre: "Algodón licrado", precio: "$35.000" }
+    ],
+    descripcion: "Camiseta de una máscara oni, en tornasol, diseño exclusivo!.",
+    imagen: "IMG/Mascara Oni.jpeg",   
+    tipo: "camisetas",
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+  }, 
+  {
+    id: 29,
+    nombre: "Camiseta Oversize - Umi",
+    materiales: [
+      { nombre: "Burda", precio: "$65.000" },
+      { nombre: "Scuba", precio: "$55.000" },
+      { nombre: "Algodón licrado", precio: "$35.000" }
+    ],
+    descripcion: "Camiseta Overzise Umi, un diseño unico al estilo Oni.",
+    imagen: "IMG/Umi.jpeg",   
+    tipo: "camisetas",
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+  },  
+  {
+    id: 30,
+    nombre: "Camiseta Oversize - One Piece",
+    materiales: [
+      { nombre: "Burda", precio: "$65.000" },
+      { nombre: "Scuba", precio: "$55.000" },
+      { nombre: "Algodón licrado", precio: "$35.000" }
+    ],
+    descripcion: "Camiseta Overzise Piece, diseños exclusivos al estilo Oni.",
+    imagen: "IMG/one piece.jpeg",   
+    tipo: "camisetas",
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+  },  
+  {
+    id: 31,
+    nombre: "Camiseta Oversize - Spy x Family",
+    materiales: [
+      { nombre: "Burda", precio: "$65.000" },
+      { nombre: "Scuba", precio: "$55.000" },
+      { nombre: "Algodón licrado", precio: "$35.000" }
+    ],
+    descripcion: "Camiseta Overzise Spy x family, diseños exclusivos al estilo Oni.",
+    imagen: "IMG/Spy x family.jpeg",   
+    tipo: "camisetas",
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+  },
+  {
+    id: 32,
+    nombre: "Camiseta Oversize - Studio Ghibli",
+    materiales: [
+      { nombre: "Burda", precio: "$65.000" },
+      { nombre: "Scuba", precio: "$55.000" },
+      { nombre: "Algodón licrado", precio: "$35.000" }
+    ],
+    descripcion: "Camiseta Overzise Studio ghibli, diseños exclusivos al estilo Oni.",
+    imagen: "IMG/Studio ghibli.jpeg",   
+    tipo: "camisetas",
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+  },
+  {
+    id: 33,
+    nombre: "Camiseta Oversize - The Legend of Zelda",
+    materiales: [
+      { nombre: "Burda", precio: "$65.000" },
+      { nombre: "Scuba", precio: "$55.000" },
+      { nombre: "Algodón licrado", precio: "$35.000" }
+    ],
+    descripcion: "Camiseta Overzise The Legend of Zelda, diseños exclusivos al estilo Oni.",
+    imagen: "IMG/The Legend of Zelda.jpeg",   
+    tipo: "camisetas",
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+  },
+  {
+    id: 34,
+    nombre: "Camiseta Oversize - Yor Spy x Family",
+    materiales: [
+      { nombre: "Burda", precio: "$65.000" },
+      { nombre: "Scuba", precio: "$55.000" },
+      { nombre: "Algodón licrado", precio: "$35.000" }
+    ],
+    descripcion: "Camiseta Overzise Yor Spy x Family, diseños exclusivos al estilo Oni.",
+    imagen: "IMG/yor spy x family.jpeg",   
+    tipo: "camisetas",
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+  },
+  {
+    id: 35,
+    nombre: "Camiseta Oversize - Zoro One Piece",
+    materiales: [
+      { nombre: "Burda", precio: "$65.000" },
+      { nombre: "Scuba", precio: "$55.000" },
+      { nombre: "Algodón licrado", precio: "$35.000" }
+    ],
+    descripcion: "Camiseta Overzise Zoro One Piece, diseños exclusivos al estilo Oni.",
+    imagen: "IMG/Zoro 1.jpeg",   
+    tipo: "camisetas",
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+  },
+    {
+    id: 36,
+    nombre: "Camiseta Oversize - Zoro One Piece",
+    materiales: [
+      { nombre: "Burda", precio: "$65.000" },
+      { nombre: "Scuba", precio: "$55.000" },
+      { nombre: "Algodón licrado", precio: "$35.000" }
+    ],
+    descripcion: "Camiseta Overzise Zoro One Piece, diseños exclusivos al estilo Oni.",
+    imagen: "IMG/Zoro 2.jpeg",   
+    tipo: "camisetas",
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+  },
+    {
+    id: 37,
+    nombre: "Camiseta Oversize - Zoro One Piece",
+    materiales: [
+      { nombre: "Burda", precio: "$65.000" },
+      { nombre: "Scuba", precio: "$55.000" },
+      { nombre: "Algodón licrado", precio: "$35.000" }
+    ],
+    descripcion: "Camiseta Overzise Zoro One Piece, diseños exclusivos al estilo Oni.",
+    imagen: "IMG/zoro 3.jpeg",   
+    tipo: "camisetas",
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+  },
+  {
+    id: 38,
+    nombre: "Hoodie - Dragón Oni",
+    descripcion: "Hoodie Dragón Oni, cálido y resistente",
+    imagen: "IMG/Dragon oni 2.jpeg",
+    tipo: "hoodies",
+    materiales: [
+      { nombre: "Monaco", precio: "$85.000" },
+      { nombre: "Antartido licrado", precio: "$85.000" }
+    ],
+    tallas: ["S", "M", "L", "XL", "XXL"],
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+  },
+  {
+    id: 39,
+    nombre: "Hoodie - Dragón Oni",
+    descripcion: "Hoodie Dragón Oni, cálido y resistente",
+    imagen: "IMG/Dragon oni.jpeg",
+    tipo: "hoodies",
+    materiales: [
+      { nombre: "Monaco", precio: "$85.000" },
+      { nombre: "Antartido licrado", precio: "$85.000" }
+    ],
+    tallas: ["S", "M", "L", "XL", "XXL"],
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+  },
+  {
+    id: 40,
+    nombre: "Hoodie  Oni",
+    descripcion: "Hoodie Oni, cálido y resistente",
+    imagen: "IMG/Hoodie Oni.jpeg",
+    tipo: "hoodies",
+    materiales: [
+      { nombre: "Monaco", precio: "$85.000" },
+      { nombre: "Antartido licrado", precio: "$85.000" }
+    ],
+    tallas: ["S", "M", "L", "XL", "XXL"],
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+  },
+  {
+    id: 41,
+    nombre: "Hoodie  Oni",
+    descripcion: "Hoodie Oni, cálido y resistente",
+    imagen: "IMG/Hoodie Oni 2.jpeg",
+    tipo: "hoodies",
+    materiales: [
+      { nombre: "Monaco", precio: "$85.000" },
+      { nombre: "Antartido licrado", precio: "$85.000" }
+    ],
+    tallas: ["S", "M", "L", "XL", "XXL"],
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+  },
 ];
 let carrito = [];
-// Función para filtrar productos según el tipo
+// Función para filtrar productos según el tipo 
 
 function filtrarProductos(tipo) {
   const contenedor = document.getElementById("productos-container");

@@ -1030,6 +1030,52 @@ body {
   color: #f0f0f0;
 }
 
+.valor-card i {
+  font-size: 2.5rem;
+  color: #8522f3;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.valor-card:hover i {
+  transform: scale(1.1);
+}
+
+.valor-card h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #f0f0f0;
+}
+
+/* --- Estilos Página Personalizado --- */
+.custom-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+}
+.custom-column {
+  flex: 1;
+  max-width: 600px;
+}
+.custom-image {
+  width: 100%;
+  border-radius: 12px;
+}
+.custom-subtitle {
+  font-size: 1.1rem;
+}
+.option-section {
+  margin: 1rem 0;
+}
+.warning-box {
+  margin: 1.5rem 0; background: #1c1c1c; padding: 1rem; border-left: 4px solid #ff278e; border-radius: 8px;
+}
+.delivery-info {
+  margin-top: 1rem;
+  color: #70f6f2;
+}
+
 @media (max-width: 768px) {
   .nosotros-hero h1 {
     font-size: 2.5rem;
@@ -1056,4 +1102,103 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* --- Estilos Panel Carrito (de compra.html) --- */
+#carrito-panel {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  width: 300px;
+  background: #1c1c1c;
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+  z-index: 1000;
+  box-shadow: 0 0 10px #000;
+  border: 1px solid #333;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* --- Estilos Botón Flotante WhatsApp (de index.html) --- */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+.whatsapp-float img {
+  width: 35px;
+  height: 35px;
+}
+
+/* --- Estilos Categorías (de index.html) --- */
+.categories h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* --- Estilos Página Compra (compra.html) --- */
+.product-detail-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+}
+.product-detail-column {
+  flex: 1;
+  max-width: 600px;
+}
+.product-detail-image {
+  width: 100%;
+  border-radius: 12px;
+}
+.option-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.delivery-info {
+  color: #70f6f2;
+}
+
+/* --- Estilos Advertencia (de personalizado.html) --- */
+.warning-box {
+  margin: 1.5rem 0;
+  background: #1c1c1c;
+  padding: 1rem;
+  border-left: 4px solid #ff278e;
+  border-radius: 8px;
+}
+.warning-title {
+  color: #ff278e;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.warning-list {
+  padding-left: 1rem;
+  color: #ccc;
+}
+.warning-list a.email-link {
+  color:#70f6f2;
 }
