@@ -7,30 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Neón Oni</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    /* Estilos para el botón flotante de WhatsApp */
-    .whatsapp-float {
-      position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 40px;
-      right: 40px;
-      background-color: #25d366;
-      color: #FFF;
-      border-radius: 50px;
-      text-align: center;
-      font-size: 30px;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
-      z-index: 100;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: transform 0.3s ease;
-    }
-    .whatsapp-float:hover {
-        transform: scale(1.1);
-    }
-  </style>
 </head>
 
 <body>
@@ -48,6 +24,7 @@
       <a href="index.html">Inicio</a>
       <a href="productos.html">Productos</a>
       <a href="nosotros.html">Nosotros</a>
+      <a href="faq.html">FAQ</a>
       <a href="https://wa.me/573151774787?text=Hola,%20vengo%20de%20la%20página%20web%20y%20me%20gustaría%20obtener%20más%20información." target="_blank" class="btn">Contáctanos</a>
     </nav>
   </header>
@@ -58,7 +35,7 @@
       Tu navegador no admite vídeos HTML5.
     </video>
     <div class="overlay">
-      <h1>Streetwear Japonés<br /><span>Con esencia Samurai</span></h1>
+      <h1 class="glitch" data-text="Streetwear Japonés Con esencia Samurai">Streetwear Japonés<br /><span>Con esencia Samurai</span></h1>
       <button class="cta" onclick="window.location.href='productos.html'">Descubre la colección</button>
     </div>
   </section>
@@ -66,24 +43,24 @@
   <!--NUEVA COLECCION -->
 
   <section class="nueva-coleccion" id="nueva-coleccion">
-    <h2>NUEVA COLECCIÓN</h2>
-        <p>Inspirado por la disciplina samurái y la estética urbana japonesa</p>
-        <div class="coleccion-imagenes">
-            <a href="compra.html?producto=19" class="item-coleccion">
-                <img src="IMG/Camiseta Tanjiro.jpeg" alt="Referencia 1">
-                <p class="desc">Camiseta Oversize- Tanjiro</p>
+    <h2 class="hidden-anim">NUEVA COLECCIÓN</h2>
+        <p class="hidden-anim">Inspirado por la disciplina samurái y la estética urbana japonesa</p>
+        <div class="coleccion-imagenes ">
+            <a href="compra.html?producto=19" class="item-coleccion hidden-anim">
+                <img src="IMG/Camiseta Tanjiro.jpeg" alt="Camiseta Tanjiro's Resolve Tee" loading="lazy" decoding="async" width="400" height="400">
+                <p class="desc">Tanjiro's Resolve Tee</p>
                 <p class="price">$65.000</p>
             </a>
 
-            <a href="compra.html?producto=40" class="item-coleccion">
-                <img src="IMG/Hoodie Oni.jpeg" alt="Referencia 2">
-                <p class="desc">Hoddie Oni</p>
+            <a href="compra.html?producto=40" class="item-coleccion hidden-anim">
+                <img src="IMG/Hoodie Oni.jpeg" alt="Hoodie Oni's Shadow" loading="lazy" decoding="async" width="400" height="400">
+                <p class="desc">Oni's Shadow Hoodie</p>
                 <p class="price">$85.000</p>
             </a>
 
-            <a href="compra.html?producto=11" class="item-coleccion">
-                <img src="IMG/Picachu.png" alt="Referencia 3">
-                <p class="desc">Pad de Mouse Pikachu</p>
+            <a href="compra.html?producto=11" class="item-coleccion hidden-anim">
+                <img src="IMG/Picachu.png" alt="Mousepad Akatsuki Pikachu" loading="lazy" decoding="async" width="400" height="400">
+                <p class="desc">Akatsuki Pikachu Pad</p>
                 <p class="price">$25.000</p>
             </a> 
             
@@ -93,7 +70,7 @@
   <!--RESEÑAS-->
 
   <section class="reseñas" id="reseñas">
-    <h2>RESEÑAS</h2>
+    <h2 class="hidden-anim">RESEÑAS</h2>
   
     <div class="carousel">
       <!-- Botón anterior -->
@@ -101,9 +78,9 @@
   
       <div class="carousel-track">
         <!-- Reseña 1 -->
-        <div class="reseña-card">
+        <div class="reseña-card hidden-anim">
           <div class="card-header">
-            <img src="IMG/Quinta imagen.jpeg" alt="Reseña 1" />
+            <img src="IMG/Quinta imagen.jpeg" alt="Reseña de producto 1" loading="lazy" decoding="async" width="175" height="175" />
             <div class="rating">★★★★★</div>
           </div>
           <div class="card-body">
@@ -113,9 +90,9 @@
         </div>
   
         <!-- Reseña 2 -->
-        <div class="reseña-card">
+        <div class="reseña-card hidden-anim">
           <div class="card-header">
-            <img src="IMG/tercera imagen.png" alt="Reseña 2" />
+            <img src="IMG/tercera imagen.png" alt="Reseña de producto 2" loading="lazy" decoding="async" width="175" height="175" />
             <div class="rating">★★★★★</div>
           </div>
           <div class="card-body">
@@ -125,9 +102,9 @@
         </div>
   
         <!-- Reseña 3 -->
-        <div class="reseña-card">
+        <div class="reseña-card hidden-anim">
           <div class="card-header">
-            <img src="IMG/cuarta imagen.png" alt="Reseña 3" />
+            <img src="IMG/cuarta imagen.png" alt="Reseña de producto 3" loading="lazy" decoding="async" width="175" height="175" />
             <div class="rating">★★★★★</div>
           </div>
           <div class="card-body">
@@ -137,9 +114,9 @@
         </div>
 
         <!-- Reseña 4-->
-        <div class="reseña-card">
+        <div class="reseña-card hidden-anim">
             <div class="card-header">
-              <img src="IMG/Quinta imagen.jpeg" alt="Reseña 3" />
+              <img src="IMG/Quinta imagen.jpeg" alt="Reseña de producto 4" loading="lazy" decoding="async" width="175" height="175" />
               <div class="rating">★★★★★</div>
             </div>
             <div class="card-body">
@@ -149,9 +126,9 @@
           </div>
 
           <!-- Reseña 5 -->
-        <div class="reseña-card">
+        <div class="reseña-card hidden-anim">
             <div class="card-header">
-              <img src="IMG/cuarta imagen.png" alt="Reseña 3" />
+              <img src="IMG/cuarta imagen.png" alt="Reseña de producto 5" loading="lazy" decoding="async" width="175" height="175" />
               <div class="rating">★★★★★</div>
             </div>
             <div class="card-body">
@@ -169,28 +146,28 @@
   <!--SELECCION DE CATEGORY GRID, CAMISETAS, HOODIES, ACCESORIOS Y PERSONALIZADO-->
 
   <section class="categories">
-    <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Categorías</h2>
+    <h2 class="hidden-anim" style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Categorías</h2>
     <div class="category-grid">
-      <a href="productos.html?tipo=camisetas" class="category-card">
-        <img src="IMG/Primera imagen.jpeg" alt="Camisetas" />
+      <a href="productos.html?tipo=camisetas#productos-container" class="category-card hidden-anim">
+        <img src="IMG/Primera imagen.jpeg" alt="Categoría Camisetas" loading="lazy" decoding="async" width="280" height="400" />
         <div class="overlay"></div>
         <span class="category-title">CAMISETAS</span>
       </a>
   
-      <a href="productos.html?tipo=hoodies" class="category-card">
-        <img src="IMG/tercera imagen.png" alt="Hoodies" />
+      <a href="productos.html?tipo=hoodies#productos-container" class="category-card hidden-anim">
+        <img src="IMG/tercera imagen.png" alt="Categoría Hoodies" loading="lazy" decoding="async" width="280" height="400" />
         <div class="overlay"></div>
         <span class="category-title">HOODIES</span>
       </a>
   
-      <a href="productos.html?tipo=accesorios" class="category-card">
-        <img src="IMG/cuarta imagen.png" alt="Accesorios" />
+      <a href="productos.html?tipo=accesorios#productos-container" class="category-card hidden-anim">
+        <img src="IMG/cuarta imagen.png" alt="Categoría Accesorios" loading="lazy" decoding="async" width="280" height="400" />
         <div class="overlay"></div>
         <span class="category-title">ACCESORIOS</span>
       </a>
   
-      <a href="personalizado.html" class="category-card">
-        <img src="IMG/segunda imagen.jpg" alt="Personalizado" />
+      <a href="personalizado.html" class="category-card hidden-anim">
+        <img src="IMG/segunda imagen.jpg" alt="Categoría Personalizado" loading="lazy" decoding="async" width="280" height="400" />
         <div class="overlay"></div>
         <span class="category-title">PERSONALIZADO</span>
       </a>
@@ -202,23 +179,23 @@
     <!--INFORMACION DE VISTA, PAGOS, ETC-->
 
     <section class="info-benefits">
-        <div class="benefit">
-          <img src="IMG/candado.png" alt="Pago Seguro" />
+        <div class="benefit hidden-anim">
+          <img src="IMG/candado.png" alt="Icono de pago seguro" loading="lazy" decoding="async" width="40" height="40" />
           <h3>PAGOS FLEXIBLES Y SEGUROS</h3>
           <p>Aceptamos <strong>Nequi, Daviplata, Bancolombia, Visa y Mastercard</strong> con total seguridad.</p>
         </div>
-        <div class="benefit">
-          <img src="IMG/CAMION.png" alt="Envío Exprés" />
+        <div class="benefit hidden-anim">
+          <img src="IMG/CAMION.png" alt="Icono de envío exprés" loading="lazy" decoding="async" width="40" height="40" />
           <h3>ENVÍO EXPRÉS</h3>
           <p>Recibe tu pedido en menos de <strong>2 días hábiles</strong>. <u>Aplica T&C</u></p>
         </div>
-        <div class="benefit">
-          <img src="IMG/icono.png" alt="Cambios Rápidos" />
+        <div class="benefit hidden-anim">
+          <img src="IMG/icono.png" alt="Icono de cambios rápidos" loading="lazy" decoding="async" width="40" height="40" />
           <h3>CAMBIOS FÁCILES</h3>
           <p>Tienes hasta <strong>30 días</strong> para hacer cambios o devoluciones. <u>Consulta condiciones</u></p>
         </div>
-        <div class="benefit">
-          <img src="IMG/estrella.png" alt="Calidad Premium" />
+        <div class="benefit hidden-anim">
+          <img src="IMG/estrella.png" alt="Icono de calidad premium" loading="lazy" decoding="async" width="40" height="40" />
           <h3>CALIDAD PREMIUM</h3>
           <p>Fabricado con los <strong>estándares más altos</strong> y materiales resistentes.</p>
         </div>
@@ -229,6 +206,15 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png" alt="Contactar por WhatsApp" style="width: 35px; height: 35px;">
   </a>
   
+  <!-- Banner de Cookies -->
+  <div id="cookie-banner">
+    <p>Utilizamos cookies para mejorar tu experiencia. Al continuar, aceptas nuestro uso de cookies.</p>
+    <div class="cookie-buttons">
+      <button id="cookie-accept" class="cta">Aceptar</button>
+      <button id="cookie-decline" class="cta cta-secondary">Rechazar</button>
+    </div>
+  </div>
+
   <footer>
     <p>© 2025 Neon Oni. Todos los derechos reservados.</p>
   </footer>
@@ -245,17 +231,92 @@
       }
 
       // --- Lógica del Carrusel de Reseñas ---
+      const carousel = document.querySelector(".carousel");
       const prevButton = document.querySelector(".carousel-btn.prev");
       const nextButton = document.querySelector(".carousel-btn.next");
       const track = document.querySelector(".carousel-track");
+      let autoScrollInterval;
 
-      if (prevButton && nextButton && track) {
+      if (carousel && prevButton && nextButton && track) {
         prevButton.addEventListener("click", () => {
           track.scrollBy({ left: -300, behavior: "smooth" });
         });
 
         nextButton.addEventListener("click", () => {
           track.scrollBy({ left: 300, behavior: "smooth" });
+        });
+
+        // Función para iniciar el desplazamiento automático
+        const startAutoScroll = () => {
+          autoScrollInterval = setInterval(() => {
+            // Si llega al final, vuelve al principio
+            if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 1) {
+              track.scrollTo({ left: 0, behavior: "smooth" });
+            } else {
+              track.scrollBy({ left: 300, behavior: "smooth" });
+            }
+          }, 3000); // Cambia cada 3 segundos
+        };
+
+        // Función para detener el desplazamiento
+        const stopAutoScroll = () => {
+          clearInterval(autoScrollInterval);
+        };
+
+        carousel.addEventListener("mouseenter", stopAutoScroll);
+        carousel.addEventListener("mouseleave", startAutoScroll);
+
+        startAutoScroll(); // Inicia el carrusel al cargar la página
+      }
+
+      // --- Lógica de Animación al Hacer Scroll ---
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show-anim');
+          }
+        });
+      });
+      document.querySelectorAll('.hidden-anim').forEach((el) => observer.observe(el));
+
+      // --- Lógica del Botón de WhatsApp ---
+      const whatsappButton = document.querySelector('.whatsapp-float');
+      if (whatsappButton) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 200) { // Aparece después de bajar 200px
+            whatsappButton.classList.add('visible');
+          } else {
+            whatsappButton.classList.remove('visible');
+          }
+        });
+      }
+
+      // --- Lógica del Banner de Cookies ---
+      const banner = document.getElementById('cookie-banner');
+      const acceptBtn = document.getElementById('cookie-accept');
+      const declineBtn = document.getElementById('cookie-decline');
+
+      // Comprobar si el usuario ya ha aceptado/rechazado las cookies
+      if (!localStorage.getItem('cookie_consent')) {
+        banner.style.display = 'flex';
+      }
+
+      acceptBtn.addEventListener('click', () => {
+        localStorage.setItem('cookie_consent', 'accepted');
+        banner.style.display = 'none';
+      });
+
+      declineBtn.addEventListener('click', () => {
+        localStorage.setItem('cookie_consent', 'declined');
+        banner.style.display = 'none';
+      });
+
+      // --- Lógica del Efecto Parallax en el Hero ---
+      const video = document.querySelector('.background-video');
+      if (video) {
+        window.addEventListener('scroll', () => {
+          const scrollPosition = window.scrollY;
+          video.style.transform = `translateY(${scrollPosition * 0.5}px) scale(1.1)`;
         });
       }
     });

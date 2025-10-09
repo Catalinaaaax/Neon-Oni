@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Detalle de Producto</title>
   <link rel="stylesheet" href="styles.css" />
+  <!-- Font Awesome para iconos de estrellas -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 <body>
   <header class="navbar">
@@ -20,17 +22,19 @@
       <a href="index.html">Inicio</a>
       <a href="productos.html">Productos</a>
       <a href="nosotros.html">Nosotros</a>
+      <a href="faq.html">FAQ</a>
       <a href="https://wa.me/573151774787?text=Hola,%20vengo%20de%20la%20página%20web%20y%20me%20gustaría%20obtener%20más%20información." target="_blank" class="btn">Contáctanos</a>
     </nav>
   </header>
 
   <main class="page-section" style="display: flex; flex-wrap: wrap; gap: 3rem; justify-content: center;">
     <div style="flex: 1; max-width: 600px;">
-      <img id="imagen-producto" src="" alt="Producto" style="width: 100%; border-radius: 12px;" />
+      <img id="imagen-producto" src="" alt="Producto" style="width: 100%; border-radius: 12px;" decoding="async" width="600" height="600" />
     </div>
 
     <div style="flex: 1; max-width: 600px;">
       <h1 id="titulo-producto"></h1>
+      <div id="product-rating-display" class="product-rating-display"></div> <!-- Nuevo div para la valoración -->
       <p id="descripcion-producto"></p>
       <p><strong>Precio:</strong> <span id="precio-producto"></span></p>
       <p><strong>Material:</strong></p>
@@ -56,9 +60,29 @@
     </div>
   </main>
 
+  <!-- Productos Relacionados -->
+  <section id="productos-relacionados-section" class="related-products-section page-section" style="display: none;">
+    <h2>También te podría interesar</h2>
+    <div id="related-products-grid" class="product-grid">
+      <!-- Los productos relacionados se insertarán aquí con JS -->
+    </div>
+  </section>
+
+  <!-- Banner de Cookies -->
+  <div id="cookie-banner">
+    <p>Utilizamos cookies para mejorar tu experiencia. Al continuar, aceptas nuestro uso de cookies.</p>
+    <div class="cookie-buttons">
+      <button id="cookie-accept" class="cta">Aceptar</button>
+      <button id="cookie-decline" class="cta cta-secondary">Rechazar</button>
+    </div>
+  </div>
+
   <footer>
     <p>© 2025 Neon Oni. Todos los derechos reservados.</p>
   </footer>
+
+  <!-- Importamos el script principal que contiene la lógica del carrito -->
+  <script type="module" src="productos.js"></script>
 
   <script type="module">
     import { todosLosProductos } from './productos.js';
@@ -173,6 +197,8 @@
           formaContainer.appendChild(btn);
         });
       }
+      cargarProductosRelacionados(producto);
+      renderStars(producto.rating, 'product-rating-display'); // Renderizar estrellas
     }
 
     function comprarAhora() {
@@ -215,68 +241,53 @@
       const forma = formaSeleccionada ? formaSeleccionada.textContent : "Sin seleccionar";
 
       let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-      carrito.push({
+      const nuevoItem = {
         nombre: producto.nombre,
         precio: precioActual || producto.precio,
         material: materialSeleccionado,
         talla,
         color,
         forma
-      });
+      };
 
-      localStorage.setItem('carrito', JSON.stringify(carrito));
-      actualizarContador();
-      mostrarCarrito();
+      // Usamos la función global de productos.js
+      window.agregarAlCarrito(null, nuevoItem.nombre, nuevoItem.precio, document.getElementById('imagen-producto'));
     }
 
-    function actualizarContador() {
+    function actualizarContadorLocal() {
       const contador = document.getElementById("contador-carrito");
       if (contador) contador.textContent = JSON.parse(localStorage.getItem("carrito") || "[]").length;
     }
 
-    function mostrarCarrito() {
-      let carrito = JSON.parse(localStorage.getItem("carrito") || "[]");
+    // --- Inicialización al cargar la página ---
+    document.addEventListener('DOMContentLoaded', () => {
+      // El script principal de productos.js ya carga el carrito y actualiza el contador,
+      // pero lo llamamos aquí de nuevo por si acaso.
+      actualizarContadorLocal();
 
-      let panel = document.getElementById('carrito-panel');
-      if (!panel) {
-        panel = document.createElement('div');
-        panel.id = 'carrito-panel';
-        panel.style.cssText = `
-          position: fixed;
-          top: 70px;
-          right: 20px;
-          width: 300px;
-          background: #1c1c1c;
-          color: white;
-          border-radius: 10px;
-          padding: 15px;
-          z-index: 1000;
-          box-shadow: 0 0 10px #000;
-        `;
-        document.body.appendChild(panel);
+      // Asociar el clic del icono del carrito a la función global del panel
+      const iconoCarrito = document.getElementById('icono-carrito');
+      if (iconoCarrito) {
+        iconoCarrito.addEventListener('click', (e) => {
+          e.preventDefault(); // Prevenir navegación si es un <a>
+          window.toggleCarritoPanel();
+        });
       }
+    });
 
-      panel.innerHTML = `
-        <h3>Carrito</h3>
-        <ul id="lista-carrito" style="list-style:none; padding:0; max-height:200px; overflow-y:auto;">
-          ${carrito.map((item, i) => `
-            <li style="margin-bottom: 10px;">
-              ${item.nombre} - ${item.precio}
-              <button onclick="eliminarDelCarrito(${i})" style="float:right; background:red; color:white; border:none; border-radius:5px; cursor:pointer;">X</button>
-            </li>`).join('')}
-        </ul>
-        <button onclick="pagarAhora()" style="width:100%; padding:10px; margin-top:10px; background:#a020f0; color:white; border:none; border-radius:8px; cursor:pointer;">Pagar ahora</button>
-      `;
-    }
-
+    // Esta función ya no es necesaria aquí, usamos la de productos.js
+    /*
     function eliminarDelCarrito(index) {
       let carrito = JSON.parse(localStorage.getItem("carrito") || "[]");
       carrito.splice(index, 1);
-      localStorage.setItem("carrito", JSON.stringify(carrito));
-      actualizarContador();
-      mostrarCarrito();
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+      actualizarContadorLocal();
+      // La renderización ahora la maneja el panel global
+      if (document.getElementById('carrito-panel')?.classList.contains('visible')) {
+        window.renderizarContenidoCarrito();
+      }
     }
-
+    
     function pagarAhora() {
       let carrito = JSON.parse(localStorage.getItem("carrito") || "[]");
       if (carrito.length === 0) {
@@ -291,9 +302,88 @@
       );
       window.open(`https://wa.me/573151774787?text=${mensaje}`, '_blank');
     }
+    */
+
+    function cargarProductosRelacionados(productoActual) {
+      const grid = document.getElementById('related-products-grid');
+      const section = document.getElementById('productos-relacionados-section');
+      if (!grid || !section) return;
+
+      // Filtrar productos de la misma categoría, excluyendo el actual
+      const relacionados = todosLosProductos.filter(
+        p => p.tipo === productoActual.tipo && p.id !== productoActual.id
+      );
+
+      if (relacionados.length === 0) {
+        section.style.display = 'none';
+        return;
+      }
+
+      // Mostrar la sección y un máximo de 4 productos aleatorios
+      section.style.display = 'block';
+      const seleccion = relacionados.sort(() => 0.5 - Math.random()).slice(0, 4);
+
+      grid.innerHTML = ''; // Limpiar el contenedor
+      seleccion.forEach(producto => {
+        let precioParaMostrar = producto.precio;
+        if (producto.materiales && producto.materiales.length > 0) {
+           const parsePrice = (priceStr) => parseInt(String(priceStr).replace(/\$|\./g, ''), 10);
+           const materialMasBarato = producto.materiales.reduce((min, current) => {
+                return parsePrice(current.precio) < parsePrice(min.precio) ? current : min;
+            }, producto.materiales[0]);
+            precioParaMostrar = `Desde ${materialMasBarato.precio}`;
+        }
+
+        const item = document.createElement("a");
+        item.href = `compra.html?producto=${producto.id}`;
+        item.className = "product-item";
+        item.innerHTML = `
+          <img src="${producto.imagen}" alt="${producto.nombre}" loading="lazy" decoding="async" width="300" height="300">
+          <p>${producto.nombre}</p>
+          <p>${precioParaMostrar}</p>
+        `;
+        grid.appendChild(item);
+      });
+    }
+
+    // Nueva función para renderizar estrellas
+    function renderStars(rating, containerId) {
+      const container = document.getElementById(containerId);
+      if (!container || rating === undefined || rating === null) {
+        // Si no hay contenedor o no hay rating, no renderizar
+        return;
+      }
+
+      container.innerHTML = ''; // Limpiar estrellas previas
+      const fullStars = Math.floor(rating);
+      const halfStar = rating % 1 >= 0.5;
+      const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+
+      for (let i = 0; i < fullStars; i++) {
+        const star = document.createElement('i');
+        star.className = 'fas fa-star'; // Estrella rellena
+        container.appendChild(star);
+      }
+      if (halfStar) {
+        const star = document.createElement('i');
+        star.className = 'fas fa-star-half-alt'; // Media estrella
+        container.appendChild(star);
+      }
+      for (let i = 0; i < emptyStars; i++) {
+        const star = document.createElement('i');
+        star.className = 'far fa-star'; // Estrella vacía (contorno)
+        container.appendChild(star);
+      }
+      // Opcional: añadir el número de la valoración
+      const ratingText = document.createElement('span');
+      ratingText.textContent = ` (${rating.toFixed(1)}/5)`;
+      ratingText.style.marginLeft = '5px';
+      ratingText.style.color = '#ccc';
+      container.appendChild(ratingText);
+    }
 
     window.comprarAhora = comprarAhora;
-    window.agregarAlCarrito = agregarAlCarrito;
+    window.agregarAlCarrito = agregarAlCarrito; // Usamos la función local que llama a la global
   </script>
 </body>
 </html>

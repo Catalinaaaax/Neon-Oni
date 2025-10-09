@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preguntas Frecuentes - Neón Oni</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="branding">
+      <img src="IMG/LOGO NEON ONI.png" alt="Logo Neón Oni" />
+      <span class="titulo-japones">ネオン鬼</span>
+    </div>
+    <nav>
+      <a href="checkout.html" class="carrito-icono-container" title="Ver carrito">
+        <img src="IMG/CARRITO BLANCO.png" alt="Carrito" id="icono-carrito" />
+        <span id="contador-carrito">0</span>
+      </a>
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="faq.html" class="active">FAQ</a>
+      <a href="https://wa.me/573151774787?text=Hola,%20vengo%20de%20la%20página%20web%20y%20me%20gustaría%20obtener%20más%20información." target="_blank" class="btn">Contáctanos</a>
+    </nav>
+  </header>
+
+  <main class="page-section">
+    <div class="productos-header">
+      <h1>Preguntas Frecuentes (FAQ)</h1>
+      <p>Encuentra respuestas a las dudas más comunes de nuestro Oni Squad.</p>
+    </div>
+
+    <div class="faq-container">
+      <!-- Pregunta 1 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>¿Qué métodos de pago aceptan?</span>
+        </button>
+        <div class="faq-answer">
+          <p>Aceptamos Nequi, Daviplata, Bancolombia, Visa y Mastercard a través de un enlace de pago seguro. Para pedidos en Bogotá, también ofrecemos la opción de pago contra entrega.</p>
+        </div>
+      </div>
+
+      <!-- Pregunta 2 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>¿Cuánto tarda en llegar mi pedido?</span>
+        </button>
+        <div class="faq-answer">
+          <p>Los envíos en Bogotá suelen tardar menos de <strong>2 días hábiles</strong>. Para el resto del país, el tiempo de entrega estimado es de <strong>3 a 5 días hábiles</strong> después de confirmado el pago.</p>
+        </div>
+      </div>
+
+      <!-- Pregunta 3 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>¿Puedo hacer cambios o devoluciones?</span>
+        </button>
+        <div class="faq-answer">
+          <p>¡Claro! Tienes hasta <strong>30 días</strong> para solicitar un cambio de talla o una devolución, siempre que la prenda no haya sido usada y conserve sus etiquetas. <strong>Importante:</strong> Los productos personalizados no tienen cambio, a menos que exista un defecto de fabricación.</p>
+        </div>
+      </div>
+
+      <!-- Pregunta 4 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>¿Cuál es la diferencia entre los materiales de las camisetas?</span>
+        </button>
+        <div class="faq-answer">
+          <p>Manejamos varios materiales para que elijas el que más te guste:</p>
+          <ul>
+            <li><strong>Burda:</strong> Es un material grueso y de alta durabilidad, ideal para un look oversize estructurado y resistente.</li>
+            <li><strong>Scuba:</strong> Es más ligera y elástica, con una caída suave y un acabado moderno.</li>
+            <li><strong>Algodón Licrado:</strong> Es la opción más clásica y transpirable, muy cómoda para el uso diario.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Pregunta 5 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>¿Cómo cuido mis prendas para que el estampado dure más?</span>
+        </button>
+        <div class="faq-answer">
+          <p>Para maximizar la vida de tu prenda, te recomendamos seguir estos pasos:</p>
+          <ul>
+            <li>Lavar la prenda al revés.</li>
+            <li>Utilizar agua fría y un ciclo de lavado suave.</li>
+            <li>Evitar el uso de secadora; es mejor secar al aire libre.</li>
+            <li>No planchar directamente sobre el estampado.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Neon Oni. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const faqQuestions = document.querySelectorAll('.faq-question');
+
+      faqQuestions.forEach(button => {
+        button.addEventListener('click', () => {
+          const answer = button.nextElementSibling;
+          const item = button.parentElement;
+
+          item.classList.toggle('active');
+
+          if (item.classList.contains('active')) {
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+          } else {
+            answer.style.maxHeight = null;
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

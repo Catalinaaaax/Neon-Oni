@@ -1,3 +1,9 @@
+// Helper para asignar ratings aleatorios altos
+const getRandomHighRating = () => {
+  const ratings = [4.8, 4.9, 5.0];
+  return ratings[Math.floor(Math.random() * ratings.length)];
+};
+
 export const todosLosProductos = [
   {
     id: 1,
@@ -11,7 +17,8 @@ export const todosLosProductos = [
     imagen: "IMG/cuarta imagen.png",
     tipo: "camisetas",
     tallas: ["S", "M", "L", "XL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
   
   {
@@ -25,7 +32,8 @@ export const todosLosProductos = [
     imagen: "IMG/Hoodie 1.jpg",
     tipo: "hoodies",
     tallas: ["S", "M", "L", "XL", "XXL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
   {
     id: 3,
@@ -36,7 +44,8 @@ export const todosLosProductos = [
     tipo: "accesorios",
     material: "Acrílico resistente",
     tamaño: ["20 x 50"],
-    colores: ["Personalizado"]
+    colores: ["Personalizado"],
+    rating: getRandomHighRating()
   },
   {
     id: 4,
@@ -50,7 +59,8 @@ export const todosLosProductos = [
     imagen: "IMG/tercera imagen.png",
     tipo: "camisetas",
     tallas: ["S", "M", "L", "XL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
   {
     id: 5,
@@ -63,7 +73,8 @@ export const todosLosProductos = [
     imagen: "IMG/Hoodie 3.jpg",
     tipo: "hoodies",
     tallas: ["S", "M", "L", "XL", "XXL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
  {
     id: 6,
@@ -74,7 +85,8 @@ export const todosLosProductos = [
     tipo: "accesorios",
     material: "Acrílico resistente",
     colores: ["Personalizado"],
-    forma: ["Redondo 20x20", "Rectangular 18x22"]
+    forma: ["Redondo 20x20", "Rectangular 18x22"],
+    rating: getRandomHighRating()
   },
   {
     id: 7,
@@ -88,7 +100,8 @@ export const todosLosProductos = [
     imagen: "IMG/Quinta imagen.jpeg",
     tipo: "camisetas",
     tallas: ["S", "M", "L", "XL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
   {
     id: 8,
@@ -102,7 +115,8 @@ export const todosLosProductos = [
     imagen: "IMG/Sexta imagen.jpeg",
     tipo: "camisetas",
     tallas: ["S", "M", "L", "XL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
   {
     id: 9,
@@ -115,7 +129,8 @@ export const todosLosProductos = [
       { nombre: "Antartido licrado", precio: "$85.000" }
     ],
     tallas: ["S", "M", "L", "XL", "XXL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
    {
     id: 10,
@@ -126,7 +141,8 @@ export const todosLosProductos = [
     tipo: "accesorios",
     material: "Acrílico resistente",
     colores: ["Personalizado"],
-    forma: ["Rectangular 20x50"]
+    forma: ["Rectangular 20x50"],
+    rating: getRandomHighRating()
   },
     {
     id: 11,
@@ -137,7 +153,8 @@ export const todosLosProductos = [
     tipo: "accesorios",
     material: "Acrílico resistente",
     colores: ["Personalizado"],
-    forma: ["Redondo 20x20", "Rectangular 18x22"]
+    forma: ["Redondo 20x20", "Rectangular 18x22"],
+    rating: getRandomHighRating()
   },
    {
     id: 12,
@@ -148,7 +165,8 @@ export const todosLosProductos = [
     tipo: "accesorios",
     material: "Acrílico resistente",
     colores: ["Personalizado"],
-    forma: ["Redondo 20x20", "Rectangular 18x22"]
+    forma: ["Redondo 20x20", "Rectangular 18x22"],
+    rating: getRandomHighRating()
   },
   {
     id: 13,
@@ -159,7 +177,8 @@ export const todosLosProductos = [
     tipo: "accesorios",
     material: "Acrílico resistente",
     colores: ["Personalizado"],
-    forma: ["Redondo 20x20", "Rectangular 18x22"]
+    forma: ["Redondo 20x20", "Rectangular 18x22"],
+    rating: getRandomHighRating()
   },
     {
     id: 14,
@@ -170,7 +189,8 @@ export const todosLosProductos = [
     tipo: "accesorios",
     material: "Acrílico resistente",
     colores: ["Personalizado"],
-    forma: ["Redondo 20x20", "Rectangular 18x22"]
+    forma: ["Redondo 20x20", "Rectangular 18x22"],
+    rating: getRandomHighRating()
   },
     {
     id: 15,
@@ -181,7 +201,8 @@ export const todosLosProductos = [
     tipo: "accesorios",
     material: "Acrílico resistente",
     colores: ["Personalizado"],
-    forma: ["Redondo 20x20", "Rectangular 18x22"]
+    forma: ["Redondo 20x20", "Rectangular 18x22"],
+    rating: getRandomHighRating()
   },
     {
     id: 16,
@@ -192,7 +213,8 @@ export const todosLosProductos = [
     tipo: "accesorios",
     material: "Acrílico resistente",
     colores: ["Personalizado"],
-    forma: ["Redondo 20x20", "Rectangular 18x22"]
+    forma: ["Redondo 20x20", "Rectangular 18x22"],
+    rating: getRandomHighRating()
   },
   {
     id: 17,
@@ -206,7 +228,8 @@ export const todosLosProductos = [
     imagen: "IMG/Camiseta zoro.jpeg",
     tipo: "camisetas",
     tallas: ["S", "M", "L", "XL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
   {
     id: 18,
@@ -220,7 +243,8 @@ export const todosLosProductos = [
     imagen: "IMG/Camiseta Luna Demon Slayer.jpeg",
     tipo: "camisetas",
     tallas: ["S", "M", "L", "XL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
   {
     id: 19,
@@ -230,11 +254,12 @@ export const todosLosProductos = [
       { nombre: "Scuba", precio: "$55.000" },
       { nombre: "Algodón licrado", precio: "$35.000" }
     ],
-    descripcion: "Camiseta de Tanjiro, única y fabulosa.",
+    descripcion: "Encarna la determinación del cazador de demonios con esta camiseta oversize de Tanjiro. Un diseño vibrante que captura la esencia de su valentía, perfecta para cualquier fan de Kimetsu no Yaiba.",
     imagen: "IMG/Camiseta Tanjiro.jpeg",
     tipo: "camisetas",
     tallas: ["S", "M", "L", "XL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
   {
     id: 20,
@@ -248,7 +273,8 @@ export const todosLosProductos = [
     imagen: "IMG/Camiseta Luna Demon Slayer 2.jpeg",
     tipo: "camisetas",
     tallas: ["S", "M", "L", "XL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
   {
     id: 21,
@@ -261,20 +287,8 @@ export const todosLosProductos = [
       { nombre: "Antartido licrado", precio: "$85.000" }
     ],
     tallas: ["S", "M", "L", "XL", "XXL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
-  },
-  {
-    id: 21,
-    nombre: "Hoodie - Nezuko",
-    descripcion: "Hoodie único nezuko, cálido y resistente",
-    imagen: "IMG/Hoodie Nezuko 2.jpeg",
-    tipo: "hoodies",
-    materiales: [
-      { nombre: "Monaco", precio: "$85.000" },
-      { nombre: "Antartido licrado", precio: "$85.000" }
-    ],
-    tallas: ["S", "M", "L", "XL", "XXL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
   {
     id: 22,
@@ -288,7 +302,8 @@ export const todosLosProductos = [
     imagen: "IMG/Camiseta Inosuke Hashibira.png",
     tipo: "camisetas",
     tallas: ["S", "M", "L", "XL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
   {
     id: 23,
@@ -302,7 +317,8 @@ export const todosLosProductos = [
     imagen: "IMG/Camiseta Rengoku.png",
     tipo: "camisetas",
     tallas: ["S", "M", "L", "XL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
   {
     id: 24,
@@ -316,7 +332,8 @@ export const todosLosProductos = [
     imagen: "IMG/Camiseta shinobu kocho.png",
     tipo: "camisetas",
     tallas: ["S", "M", "L", "XL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
   {
     id: 25,
@@ -330,7 +347,8 @@ export const todosLosProductos = [
     imagen: "IMG/Camiseta Tanjiro 2.png",   
     tipo: "camisetas",
     tallas: ["S", "M", "L", "XL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
   
   {
@@ -345,7 +363,8 @@ export const todosLosProductos = [
     imagen: "IMG/Nezuko Kamado.png",   
     tipo: "camisetas",
     tallas: ["S", "M", "L", "XL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
   {
     id: 28,
@@ -359,7 +378,8 @@ export const todosLosProductos = [
     imagen: "IMG/Mascara Oni.jpeg",   
     tipo: "camisetas",
     tallas: ["S", "M", "L", "XL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   }, 
   {
     id: 29,
@@ -373,7 +393,8 @@ export const todosLosProductos = [
     imagen: "IMG/Umi.jpeg",   
     tipo: "camisetas",
     tallas: ["S", "M", "L", "XL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },  
   {
     id: 30,
@@ -387,7 +408,8 @@ export const todosLosProductos = [
     imagen: "IMG/one piece.jpeg",   
     tipo: "camisetas",
     tallas: ["S", "M", "L", "XL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },  
   {
     id: 31,
@@ -401,7 +423,8 @@ export const todosLosProductos = [
     imagen: "IMG/Spy x family.jpeg",   
     tipo: "camisetas",
     tallas: ["S", "M", "L", "XL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
   {
     id: 32,
@@ -415,7 +438,8 @@ export const todosLosProductos = [
     imagen: "IMG/Studio ghibli.jpeg",   
     tipo: "camisetas",
     tallas: ["S", "M", "L", "XL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
   {
     id: 33,
@@ -429,7 +453,8 @@ export const todosLosProductos = [
     imagen: "IMG/The Legend of Zelda.jpeg",   
     tipo: "camisetas",
     tallas: ["S", "M", "L", "XL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
   {
     id: 34,
@@ -443,7 +468,8 @@ export const todosLosProductos = [
     imagen: "IMG/yor spy x family.jpeg",   
     tipo: "camisetas",
     tallas: ["S", "M", "L", "XL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
   {
     id: 35,
@@ -457,7 +483,8 @@ export const todosLosProductos = [
     imagen: "IMG/Zoro 1.jpeg",   
     tipo: "camisetas",
     tallas: ["S", "M", "L", "XL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
     {
     id: 36,
@@ -471,7 +498,8 @@ export const todosLosProductos = [
     imagen: "IMG/Zoro 2.jpeg",   
     tipo: "camisetas",
     tallas: ["S", "M", "L", "XL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
     {
     id: 37,
@@ -485,7 +513,8 @@ export const todosLosProductos = [
     imagen: "IMG/zoro 3.jpeg",   
     tipo: "camisetas",
     tallas: ["S", "M", "L", "XL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
   {
     id: 38,
@@ -498,7 +527,8 @@ export const todosLosProductos = [
       { nombre: "Antartido licrado", precio: "$85.000" }
     ],
     tallas: ["S", "M", "L", "XL", "XXL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
   {
     id: 39,
@@ -511,12 +541,13 @@ export const todosLosProductos = [
       { nombre: "Antartido licrado", precio: "$85.000" }
     ],
     tallas: ["S", "M", "L", "XL", "XXL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
   {
     id: 40,
     nombre: "Hoodie  Oni",
-    descripcion: "Hoodie Oni, cálido y resistente",
+    descripcion: "Domina la noche con este hoodie que presenta una imponente máscara Oni. Su diseño audaz y materiales de alta calidad te mantendrán abrigado mientras proyectas un estilo inconfundible.",
     imagen: "IMG/Hoodie Oni.jpeg",
     tipo: "hoodies",
     materiales: [
@@ -524,7 +555,8 @@ export const todosLosProductos = [
       { nombre: "Antartido licrado", precio: "$85.000" }
     ],
     tallas: ["S", "M", "L", "XL", "XXL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
   {
     id: 41,
@@ -537,18 +569,28 @@ export const todosLosProductos = [
       { nombre: "Antartido licrado", precio: "$85.000" }
     ],
     tallas: ["S", "M", "L", "XL", "XXL"],
-    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"]
+    colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
+    rating: getRandomHighRating()
   },
 ];
 let carrito = [];
 // Función para filtrar productos según el tipo 
 
-function filtrarProductos(tipo) {
+function filtrarProductos(tipo, busqueda = '') {
   const contenedor = document.getElementById("productos-container");
   contenedor.innerHTML = "";
 
-  const filtrados = tipo ? todosLosProductos.filter(p => p.tipo === tipo) : todosLosProductos;
+  // 1. Invertir el array para mostrar los más nuevos primero
+  const productosMostrados = [...todosLosProductos].reverse();
 
+  // 2. Filtrar por tipo (categoría)
+  let porTipo = tipo ? productosMostrados.filter(p => p.tipo === tipo) : productosMostrados;
+
+  // 3. Filtrar por término de búsqueda
+  const busquedaLower = busqueda.toLowerCase();
+  const filtrados = porTipo.filter(p => p.nombre.toLowerCase().includes(busquedaLower));
+
+  // Renderizar los productos filtrados
   filtrados.forEach(producto => {
     let precioParaMostrar;
     let nombreParaCarrito;
@@ -578,31 +620,80 @@ function filtrarProductos(tipo) {
     item.href = `compra.html?producto=${producto.id}`;
     item.className = "product-item";
     item.innerHTML = `
-      <img src="${producto.imagen}" alt="${producto.nombre}">
+      <img src="${producto.imagen}" alt="${producto.nombre}" loading="lazy" decoding="async" width="300" height="300">
       <p>${producto.nombre}</p>
       <p>${precioParaMostrar}</p>
-      <button class="cta" onclick="event.preventDefault(); agregarAlCarrito('${safeCartName}', '${safeCartPrice}')">Agregar al carrito</button>
+      <button class="cta" onclick="agregarAlCarrito(event, '${safeCartName}', '${safeCartPrice}')">Agregar al carrito</button>
     `;
     contenedor.appendChild(item);
   });
 
   document.querySelectorAll(".cta").forEach(btn => btn.classList.remove("filtro-activo"));
-  if (tipo === "camisetas") {
+  const btnActivo = document.getElementById(`btn-${tipo || 'todos'}`);
+  if (btnActivo) {
+    btnActivo.classList.add("filtro-activo");
+  } else if (tipo === "camisetas") { // Fallback por si el tipo no tiene botón
     document.getElementById("btn-camisetas").classList.add("filtro-activo");
-  } else if (tipo === "hoodies") {
-    document.getElementById("btn-hoodies").classList.add("filtro-activo");
-  } else if (tipo === "accesorios") {
-    document.getElementById("btn-accesorios").classList.add("filtro-activo");
-  } else {
+  }
+  else {
     document.getElementById("btn-todos").classList.add("filtro-activo");
   }
 }
 
-function agregarAlCarrito(nombre, precio) {
+function agregarAlCarrito(event, nombre, precio) {
+  event.preventDefault(); // Evita que el enlace 'a' navegue
+  event.stopPropagation(); // Evita que el evento se propague más
+
+  // --- Lógica de la animación ---
+  const productCard = event.target.closest('.product-item');
+  const productImage = productCard.querySelector('img');
+  const cartIcon = document.getElementById('icono-carrito');
+
+  if (productImage && cartIcon) {
+    const productImageRect = productImage.getBoundingClientRect();
+    const cartIconRect = cartIcon.getBoundingClientRect();
+
+    const flyingImage = document.createElement('img');
+    flyingImage.src = productImage.src;
+    flyingImage.className = 'flying-image';
+
+    // Estilos iniciales (posición de la imagen del producto)
+    flyingImage.style.left = `${productImageRect.left}px`;
+    flyingImage.style.top = `${productImageRect.top}px`;
+    flyingImage.style.width = `${productImageRect.width}px`;
+    flyingImage.style.height = `${productImageRect.height}px`;
+    flyingImage.style.opacity = '1';
+
+    document.body.appendChild(flyingImage);
+
+    // Forzar un reflow para que la transición se aplique
+    flyingImage.getBoundingClientRect(); 
+
+    // Estilos finales (posición del carrito)
+    flyingImage.style.left = `${cartIconRect.left + 15}px`;
+    flyingImage.style.top = `${cartIconRect.top + 15}px`;
+    flyingImage.style.width = '0px';
+    flyingImage.style.height = '0px';
+    flyingImage.style.opacity = '0';
+
+    // Limpiar después de la animación
+    setTimeout(() => {
+      flyingImage.remove();
+      cartIcon.classList.add('cart-jiggle-animation');
+      setTimeout(() => cartIcon.classList.remove('cart-jiggle-animation'), 500);
+    }, 800); // Duración de la transición
+  }
+
+  // --- Lógica original del carrito ---
   carrito.push({ nombre, precio });
   guardarCarrito();
   actualizarContador();
-  mostrarCarrito();
+
+  // Si el panel del carrito está visible, actualízalo en tiempo real.
+  const panel = document.getElementById('carrito-panel');
+  if (panel && panel.classList.contains('visible')) {
+    renderizarContenidoCarrito();
+  }
 }
 
 function guardarCarrito() {
@@ -614,36 +705,55 @@ function actualizarContador() {
   if (contador) contador.textContent = carrito.length;
 }
 
-function mostrarCarrito() {
+function toggleCarritoPanel() {
   let panel = document.getElementById('carrito-panel');
+  
   if (!panel) {
     panel = document.createElement('div');
     panel.id = 'carrito-panel';
-    panel.style.cssText = `
-      position: fixed;
-      top: 70px;
-      right: 20px;
-      width: 300px;
-      background: #1c1c1c;
-      color: white;
-      border-radius: 10px;
-      padding: 15px;
-      z-index: 1000;
-      box-shadow: 0 0 10px #000;
-    `;
     document.body.appendChild(panel);
   }
 
+  // Si el panel está visible, lo ocultamos. Si no, lo mostramos.
+  if (panel.classList.contains('visible')) {
+    panel.classList.remove('visible');
+  } else {
+    renderizarContenidoCarrito();
+    panel.classList.add('visible');
+  }
+}
+
+function renderizarContenidoCarrito() {
+  let panel = document.getElementById('carrito-panel');
+  if (!panel) return; // No hacer nada si el panel no existe
+
+  const total = carrito.reduce((acc, item) => {
+    const price = parseInt(String(item.precio).replace(/\$|\./g, ''), 10);
+    return acc + (isNaN(price) ? 0 : price);
+  }, 0);
+
+  const formatoPrecio = new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', minimumFractionDigits: 0 });
+
   panel.innerHTML = `
-    <h3>Carrito</h3>
-    <ul id="lista-carrito" style="list-style:none; padding:0; max-height:200px; overflow-y:auto;">
+    <div class="carrito-header">
+      <h3>Carrito</h3>
+      <button onclick="toggleCarritoPanel()" class="cerrar-carrito">&times;</button>
+    </div>
+    <ul id="lista-carrito">
+      ${carrito.length === 0 ? '<li style="text-align:center; color:#888;">Tu carrito está vacío.</li>' : ''}
       ${carrito.map((item, i) => `
-        <li style="margin-bottom: 10px;">
-          ${item.nombre} - ${item.precio}
-          <button onclick="eliminarDelCarrito(${i})" style="float:right; background:red; color:white; border:none; border-radius:5px; cursor:pointer;">X</button>
+        <li style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 15px; border-bottom: 1px solid #222; padding-bottom: 10px;">
+          <span style="flex-grow:1;">${item.nombre} <br> <strong style="color:#70f6f2;">${item.precio}</strong></span>
+          <button onclick="eliminarDelCarrito(${i})" style="background:none; border:none; color:#ff278e; font-size:1.2rem; cursor:pointer; padding: 5px 10px;">X</button>
         </li>`).join('')}
     </ul>
-    <button onclick="pagarAhora()" style="width:100%; padding:10px; margin-top:10px; background:#a020f0; color:white; border:none; border-radius:8px; cursor:pointer;">Pagar ahora</button>
+    <div class="carrito-footer">
+      <div style="display:flex; justify-content:space-between; font-size:1.2rem; margin-bottom:1rem;">
+        <strong>Total:</strong>
+        <strong>${formatoPrecio.format(total)}</strong>
+      </div>
+      <button onclick="pagarAhora()" class="cta" style="width:100%;" ${carrito.length === 0 ? 'disabled' : ''}>Pagar ahora</button>
+    </div>
   `;
 }
 
@@ -651,7 +761,7 @@ function eliminarDelCarrito(index) {
   carrito.splice(index, 1);
   guardarCarrito();
   actualizarContador();
-  mostrarCarrito();
+  renderizarContenidoCarrito(); // Solo actualiza el contenido, no lo muestra/oculta
 }
 
 function pagarAhora() {
@@ -659,6 +769,9 @@ function pagarAhora() {
     alert("Tu carrito está vacío.");
     return;
   }
+
+  const total = carrito.reduce((acc, item) => acc + parseInt(String(item.precio).replace(/\$|\./g, ''), 10), 0);
+  const formatoPrecio = new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', minimumFractionDigits: 0 });
 
   const mensaje = encodeURIComponent(
     "Hola quiero realizar el pago de estos productos:\n" +
@@ -668,9 +781,33 @@ function pagarAhora() {
   window.open(`https://wa.me/573151774787?text=${mensaje}`, '_blank');
 }
 
+// Función para la animación de scroll
+function activarObservadorScroll() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show-anim');
+        observer.unobserve(entry.target); // Opcional: deja de observar el elemento una vez animado para mejorar el rendimiento.
+      }
+    });
+  });
+  document.querySelectorAll('.hidden-anim').forEach((el) => observer.observe(el));
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-  const tipo = new URLSearchParams(window.location.search).get("tipo") || "";
-  filtrarProductos(tipo);
+  // Obtener tipo de la URL, si no existe, usar 'camisetas' por defecto
+  const tipoInicial = new URLSearchParams(window.location.search).get("tipo") || "camisetas";
+  filtrarProductos(tipoInicial);
+
+  // Marcar el botón de filtro activo correcto al cargar
+  document.querySelectorAll('.filtros-container .cta').forEach(btn => {
+    btn.classList.remove('filtro-activo');
+  });
+  const btnActivo = document.getElementById(`btn-${tipoInicial}`);
+  if (btnActivo) {
+    btnActivo.classList.add('filtro-activo');
+  }
+
 
   const guardado = localStorage.getItem("carrito");
   if (guardado) {
@@ -680,20 +817,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const icono = document.getElementById("icono-carrito");
   if (icono) {
-    icono.addEventListener("click", () => {
-      const panel = document.getElementById("carrito-panel");
-      if (panel && panel.style.display !== 'none') {
-        panel.style.display = 'none';
-      } else {
-        mostrarCarrito();
-        if (panel) panel.style.display = 'block';
-      }
-    });
+    icono.addEventListener("click", toggleCarritoPanel);
   }
 });
+
+// Nueva función para manejar la búsqueda
+function buscarProductos() {
+    const busqueda = document.getElementById('search-input').value;
+    // Encontrar el filtro de categoría activo actualmente
+    const botonActivo = document.querySelector('.filtros-container .cta.filtro-activo');
+    const tipoActivo = botonActivo ? botonActivo.id.replace('btn-', '') : 'todos';
+    const tipoFinal = tipoActivo === 'todos' ? '' : tipoActivo;
+    filtrarProductos(tipoFinal, busqueda);
+}
 
 // Exponer al contexto global
 window.filtrarProductos = filtrarProductos;
 window.agregarAlCarrito = agregarAlCarrito;
 window.eliminarDelCarrito = eliminarDelCarrito;
 window.pagarAhora = pagarAhora;
+window.buscarProductos = buscarProductos;
+window.toggleCarritoPanel = toggleCarritoPanel;
