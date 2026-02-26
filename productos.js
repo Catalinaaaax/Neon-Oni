@@ -26,7 +26,7 @@ export const todosLosProductos = [
     nombre: "Hoddie Haruto",
     materiales: [
       { nombre: "Monaco", precio: "$85.000" },
-      { nombre: "Antártico Licrado", precio: "$85.000" }
+      { nombre: "Antártico Licrado", precio: "$90.000" }
     ],
     descripcion: "Hoodie cálido y resistente, con diseño japonés.",
     imagen: "IMG/Hoodie 1.jpg",
@@ -67,7 +67,7 @@ export const todosLosProductos = [
     nombre: "Hoodie Negro Oni",
     materiales: [
       { nombre: "Monaco", precio: "$85.000" },
-      { nombre: "Antártico Licrado", precio: "$85.000" }
+      { nombre: "Antártico Licrado", precio: "$90.000" }
     ],
     descripcion: "Hoodie Negro con diseño Oni de edición limitada.",
     imagen: "IMG/Hoodie 3.jpg",
@@ -126,7 +126,7 @@ export const todosLosProductos = [
     tipo: "hoodies",
     materiales: [
       { nombre: "Monaco", precio: "$85.000" },
-      { nombre: "Antartido licrado", precio: "$85.000" }
+      { nombre: "Antartido licrado", precio: "$90.000" }
     ],
     tallas: ["S", "M", "L", "XL", "XXL"],
     colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
@@ -284,7 +284,7 @@ export const todosLosProductos = [
     tipo: "hoodies",
     materiales: [
       { nombre: "Monaco", precio: "$85.000" },
-      { nombre: "Antartido licrado", precio: "$85.000" }
+      { nombre: "Antartido licrado", precio: "$90.000" }
     ],
     tallas: ["S", "M", "L", "XL", "XXL"],
     colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
@@ -524,7 +524,7 @@ export const todosLosProductos = [
     tipo: "hoodies",
     materiales: [
       { nombre: "Monaco", precio: "$85.000" },
-      { nombre: "Antartido licrado", precio: "$85.000" }
+      { nombre: "Antartido licrado", precio: "$90.000" }
     ],
     tallas: ["S", "M", "L", "XL", "XXL"],
     colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
@@ -538,7 +538,7 @@ export const todosLosProductos = [
     tipo: "hoodies",
     materiales: [
       { nombre: "Monaco", precio: "$85.000" },
-      { nombre: "Antartido licrado", precio: "$85.000" }
+      { nombre: "Antartido licrado", precio: "$90.000" }
     ],
     tallas: ["S", "M", "L", "XL", "XXL"],
     colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
@@ -552,7 +552,7 @@ export const todosLosProductos = [
     tipo: "hoodies",
     materiales: [
       { nombre: "Monaco", precio: "$85.000" },
-      { nombre: "Antartido licrado", precio: "$85.000" }
+      { nombre: "Antartido licrado", precio: "$90.000" }
     ],
     tallas: ["S", "M", "L", "XL", "XXL"],
     colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
@@ -566,7 +566,7 @@ export const todosLosProductos = [
     tipo: "hoodies",
     materiales: [
       { nombre: "Monaco", precio: "$85.000" },
-      { nombre: "Antartido licrado", precio: "$85.000" }
+      { nombre: "Antartido licrado", precio: "$90.000" }
     ],
     tallas: ["S", "M", "L", "XL", "XXL"],
     colores: ["Negro", "Blanco", "Rojo", "Azul Petroleo", "Verde Militar", "Arena", "Camel", "Marfil"],
