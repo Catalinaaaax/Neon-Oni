@@ -56,7 +56,7 @@
       <p style="color: #70f6f2;">Les recordamos que solo nos dedicamos al estampado y personalizado </p>
       
       <button class="cta" onclick="comprarAhora()">Comprar Ahora</button>
-      <button class="cta" onclick="agregarAlCarrito()">Agregar al Carrito</button>
+      <button class="cta" onclick="agregarAlCarritoDetalle()">Agregar al Carrito</button>
     </div>
   </main>
 
@@ -228,7 +228,7 @@
       window.open(`https://wa.me/573151774787?text=${encodeURIComponent(mensaje)}`, '_blank');
     }
 
-    function agregarAlCarrito() {
+    function agregarAlCarritoDetalle() {
       if (!producto) return;
 
       const tallaSeleccionada = document.querySelector('#tallas-container .selected');
@@ -251,28 +251,20 @@
       };
 
       // Usamos la función global de productos.js
-      window.agregarAlCarrito(null, nuevoItem.nombre, nuevoItem.precio, document.getElementById('imagen-producto'));
-    }
-
-    function actualizarContadorLocal() {
-      const contador = document.getElementById("contador-carrito");
-      if (contador) contador.textContent = JSON.parse(localStorage.getItem("carrito") || "[]").length;
+      window.agregarAlCarrito({
+        nombre: producto.nombre,
+        precio: precioActual || producto.precio,
+        material: materialSeleccionado,
+        talla,
+        color,
+        forma
+      }, null, null, document.getElementById('imagen-producto'));
     }
 
     // --- Inicialización al cargar la página ---
     document.addEventListener('DOMContentLoaded', () => {
-      // El script principal de productos.js ya carga el carrito y actualiza el contador,
-      // pero lo llamamos aquí de nuevo por si acaso.
-      actualizarContadorLocal();
-
-      // Asociar el clic del icono del carrito a la función global del panel
-      const iconoCarrito = document.getElementById('icono-carrito');
-      if (iconoCarrito) {
-        iconoCarrito.addEventListener('click', (e) => {
-          e.preventDefault(); // Prevenir navegación si es un <a>
-          window.toggleCarritoPanel();
-        });
-      }
+      // El script principal 'productos.js' ya se encarga de inicializar el carrito,
+      // el contador y el panel del carrito.
     });
 
     // Esta función ya no es necesaria aquí, usamos la de productos.js
@@ -383,7 +375,7 @@
     }
 
     window.comprarAhora = comprarAhora;
-    window.agregarAlCarrito = agregarAlCarrito; // Usamos la función local que llama a la global
+    window.agregarAlCarritoDetalle = agregarAlCarritoDetalle; // Exponer función local sin colisión
   </script>
 </body>
 </html>

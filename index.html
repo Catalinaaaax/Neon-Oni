@@ -17,10 +17,10 @@
     </div>
     <!-- Botones en la parte superior -->
     <nav>
-      <a href="checkout.html" class="carrito-icono-container" title="Ver carrito">
+      <div class="carrito-icono-container" title="Ver carrito">
         <img src="IMG/CARRITO BLANCO.png" alt="Carrito" id="icono-carrito" />
         <span id="contador-carrito">0</span>
-      </a>
+      </div>
       <a href="index.html">Inicio</a>
       <a href="productos.html">Productos</a>
       <a href="nosotros.html">Nosotros</a>
@@ -219,17 +219,10 @@
     <p>© 2025 Neon Oni. Todos los derechos reservados.</p>
   </footer>
 
+  <script type="module" src="productos.js"></script>
   <script>
     // Se ejecuta cuando el contenido de la página se ha cargado completamente.
     document.addEventListener('DOMContentLoaded', () => {
-      // --- Lógica del Carrito ---
-      // Actualiza el contador del carrito al cargar la página.
-      const carritoGuardado = JSON.parse(localStorage.getItem("carrito") || "[]");
-      const contadorCarrito = document.getElementById("contador-carrito");
-      if (contadorCarrito) {
-        contadorCarrito.textContent = carritoGuardado.length;
-      }
-
       // --- Lógica del Carrusel de Reseñas ---
       const carousel = document.querySelector(".carousel");
       const prevButton = document.querySelector(".carousel-btn.prev");
@@ -322,7 +315,6 @@
     });
 
   </script>
-  
 </body>
 
 
