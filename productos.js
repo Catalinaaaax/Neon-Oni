@@ -7,6 +7,7 @@ const getRandomHighRating = () => {
 export const todosLosProductos = [
   {
     id: 1,
+    segmento: "Estilo japonés",
     nombre: "Camiseta Oversize- Sekushīna geisha",
     materiales: [
       { nombre: "Burda", precio: "$65.000" },
@@ -23,6 +24,7 @@ export const todosLosProductos = [
   
   {
     id: 2,
+    segmento: "neon-oni",
     nombre: "Hoddie Haruto",
     materiales: [
       { nombre: "Monaco", precio: "$85.000" },
@@ -37,6 +39,7 @@ export const todosLosProductos = [
   },
   {
     id: 3,
+    segmento: "neon-oni",
     nombre: "Pad Mouse Gamer",
     precio: "$25.000",
     descripcion: "Accesorio moderno, edición limitada.",
@@ -49,6 +52,7 @@ export const todosLosProductos = [
   },
   {
     id: 4,
+    segmento: "neon-oni",
     nombre: "Camiseta Oversize - Geisha oni",
     materiales: [
       { nombre: "Burda", precio: "$65.000" },
@@ -64,6 +68,7 @@ export const todosLosProductos = [
   },
   {
     id: 5,
+    segmento: "neon-oni",
     nombre: "Hoodie Negro Oni",
     materiales: [
       { nombre: "Monaco", precio: "$85.000" },
@@ -78,6 +83,7 @@ export const todosLosProductos = [
   },
  {
     id: 6,
+    segmento: "neon-oni",
     nombre: "Pad Mouse",
     precio: "$15.000",
     descripcion: "Mouse pad con diseño japonés. Elige entre forma redonda o rectangular.",
@@ -90,6 +96,7 @@ export const todosLosProductos = [
   },
   {
     id: 7,
+    segmento: "neon-oni",
     nombre: "Camiseta Oversize - Oni Original",
     materiales: [
       { nombre: "Burda", precio: "$65.000" },
@@ -105,6 +112,7 @@ export const todosLosProductos = [
   },
   {
     id: 8,
+    segmento: "neon-oni",
     nombre: "Camiseta Oversize - Kōri no Kokoro",
     materiales: [
       { nombre: "Burda", precio: "$65.000" },
@@ -120,6 +128,7 @@ export const todosLosProductos = [
   },
   {
     id: 9,
+    segmento: "neon-oni",
     nombre: "Hoodie Blanco - Neon Seirei",
     descripcion: "Hoodie blanco con diseño Oni de edición limitada.",
     imagen: "IMG/Hoodie 2.jpg",
@@ -134,6 +143,7 @@ export const todosLosProductos = [
   },
    {
     id: 10,
+    segmento: "anime",
     nombre: "Pad Mouse Gamer de Naruto",
     precio: "$25.000",
     descripcion: "Mouse pad con diseño japonés. Elige entre forma redonda o rectangular.",
@@ -146,6 +156,7 @@ export const todosLosProductos = [
   },
     {
     id: 11,
+    segmento: "anime",
     nombre: "Pad Mouse de Pikachu",
     precio: "$15.000",
     descripcion: "Mouse pad con diseño japonés. Elige entre forma redonda o rectangular.",
@@ -158,6 +169,7 @@ export const todosLosProductos = [
   },
    {
     id: 12,
+    segmento: "anime",
     nombre: "Pad Mouse de Death Note",
     precio: "$15.000",
     descripcion: "Mouse pad con diseño japonés. Elige entre forma redonda o rectangular.",
@@ -170,6 +182,7 @@ export const todosLosProductos = [
   },
   {
     id: 13,
+    segmento: "anime",
     nombre: "Pad Mouse de Dragon Ball",
     precio: "$15.000",
     descripcion: "Mouse pad con diseño japonés. Elige entre forma redonda o rectangular.",
@@ -182,6 +195,7 @@ export const todosLosProductos = [
   },
     {
     id: 14,
+    segmento: "anime",
     nombre: "Pad Mouse de One Piece",
     precio: "$15.000",
     descripcion: "Mouse pad con diseño japonés. Elige entre forma redonda o rectangular.",
@@ -194,6 +208,7 @@ export const todosLosProductos = [
   },
     {
     id: 15,
+    segmento: "anime",
     nombre: "Pad Mouse de Stitch",
     precio: "$15.000",
     descripcion: "Mouse pad con diseño japonés. Elige entre forma redonda o rectangular.",
@@ -206,6 +221,7 @@ export const todosLosProductos = [
   },
     {
     id: 16,
+    segmento: "anime",
     nombre: "Pad Mouse de Naruto",
     precio: "$15.000",
     descripcion: "Mouse pad con diseño japonés. Elige entre forma redonda o rectangular.",
@@ -218,6 +234,7 @@ export const todosLosProductos = [
   },
   {
     id: 17,
+    segmento: "anime",
     nombre: "Camiseta Oversize - zoro",
     materiales: [
       { nombre: "Burda", precio: "$65.000" },
@@ -233,6 +250,7 @@ export const todosLosProductos = [
   },
   {
     id: 18,
+    segmento: "anime",
     nombre: "Camiseta Oversize - Luna Demon Slayer",
     materiales: [
       { nombre: "Burda", precio: "$65.000" },
@@ -248,6 +266,7 @@ export const todosLosProductos = [
   },
   {
     id: 19,
+    segmento: "anime",
     nombre: "Camiseta Oversize - Tanjiro",
     materiales: [
       { nombre: "Burda", precio: "$65.000" },
@@ -263,6 +282,7 @@ export const todosLosProductos = [
   },
   {
     id: 20,
+    segmento: "anime",
     nombre: "Camiseta Oversize - Luna Demon Slayer",
     materiales: [
       { nombre: "Burda", precio: "$65.000" },
@@ -278,6 +298,7 @@ export const todosLosProductos = [
   },
   {
     id: 21,
+    segmento: "anime",
     nombre: "Hoodie - Nezuko",
     descripcion: "Hoodie único nezuko, cálido y resistente",
     imagen: "IMG/Hoodie Nezuko.jpeg",
@@ -292,6 +313,7 @@ export const todosLosProductos = [
   },
   {
     id: 22,
+    segmento: "anime",
     nombre: "Camiseta Oversize - Inosuke Hashibira",
     materiales: [
       { nombre: "Burda", precio: "$65.000" },
@@ -307,6 +329,7 @@ export const todosLosProductos = [
   },
   {
     id: 23,
+    segmento: "anime",
     nombre: "Camiseta Oversize - Rengoku",
     materiales: [
       { nombre: "Burda", precio: "$65.000" },
@@ -322,6 +345,7 @@ export const todosLosProductos = [
   },
   {
     id: 24,
+    segmento: "anime",
     nombre: "Camiseta Oversize - shinobu kocho",
     materiales: [
       { nombre: "Burda", precio: "$65.000" },
@@ -337,6 +361,7 @@ export const todosLosProductos = [
   },
   {
     id: 25,
+    segmento: "anime",
     nombre: "Camiseta Oversize - Tanjiro",
     materiales: [
       { nombre: "Burda", precio: "$65.000" },
@@ -353,6 +378,7 @@ export const todosLosProductos = [
   
   {
     id: 27,
+    segmento: "anime",
     nombre: "Camiseta Oversize - Nezuko Kamado",
     materiales: [
       { nombre: "Burda", precio: "$65.000" },
@@ -368,6 +394,7 @@ export const todosLosProductos = [
   },
   {
     id: 28,
+    segmento: "neon-oni",
     nombre: "Camiseta Oversize - Máscara Oni",
     materiales: [
       { nombre: "Burda", precio: "$65.000" },
@@ -383,6 +410,7 @@ export const todosLosProductos = [
   }, 
   {
     id: 29,
+    segmento: "neon-oni",
     nombre: "Camiseta Oversize - Umi",
     materiales: [
       { nombre: "Burda", precio: "$65.000" },
@@ -398,6 +426,7 @@ export const todosLosProductos = [
   },  
   {
     id: 30,
+    segmento: "anime",
     nombre: "Camiseta Oversize - One Piece",
     materiales: [
       { nombre: "Burda", precio: "$65.000" },
@@ -413,6 +442,7 @@ export const todosLosProductos = [
   },  
   {
     id: 31,
+    segmento: "anime",
     nombre: "Camiseta Oversize - Spy x Family",
     materiales: [
       { nombre: "Burda", precio: "$65.000" },
@@ -428,6 +458,7 @@ export const todosLosProductos = [
   },
   {
     id: 32,
+    segmento: "anime",
     nombre: "Camiseta Oversize - Studio Ghibli",
     materiales: [
       { nombre: "Burda", precio: "$65.000" },
@@ -443,6 +474,7 @@ export const todosLosProductos = [
   },
   {
     id: 33,
+    segmento: "anime",
     nombre: "Camiseta Oversize - The Legend of Zelda",
     materiales: [
       { nombre: "Burda", precio: "$65.000" },
@@ -458,6 +490,7 @@ export const todosLosProductos = [
   },
   {
     id: 34,
+    segmento: "anime",
     nombre: "Camiseta Oversize - Yor Spy x Family",
     materiales: [
       { nombre: "Burda", precio: "$65.000" },
@@ -473,6 +506,7 @@ export const todosLosProductos = [
   },
   {
     id: 35,
+    segmento: "anime",
     nombre: "Camiseta Oversize - Zoro One Piece",
     materiales: [
       { nombre: "Burda", precio: "$65.000" },
@@ -488,6 +522,7 @@ export const todosLosProductos = [
   },
     {
     id: 36,
+    segmento: "anime",
     nombre: "Camiseta Oversize - Zoro One Piece",
     materiales: [
       { nombre: "Burda", precio: "$65.000" },
@@ -503,6 +538,7 @@ export const todosLosProductos = [
   },
     {
     id: 37,
+    segmento: "anime",
     nombre: "Camiseta Oversize - Zoro One Piece",
     materiales: [
       { nombre: "Burda", precio: "$65.000" },
@@ -518,6 +554,7 @@ export const todosLosProductos = [
   },
   {
     id: 38,
+    segmento: "neon-oni",
     nombre: "Hoodie - Dragón Oni",
     descripcion: "Hoodie Dragón Oni, cálido y resistente",
     imagen: "IMG/Dragon oni 2.jpeg",
@@ -532,6 +569,7 @@ export const todosLosProductos = [
   },
   {
     id: 39,
+    segmento: "neon-oni",
     nombre: "Hoodie - Dragón Oni",
     descripcion: "Hoodie Dragón Oni, cálido y resistente",
     imagen: "IMG/Dragon oni.jpeg",
@@ -546,6 +584,7 @@ export const todosLosProductos = [
   },
   {
     id: 40,
+    segmento: "neon-oni",
     nombre: "Hoodie  Oni",
     descripcion: "Domina la noche con este hoodie que presenta una imponente máscara Oni. Su diseño audaz y materiales de alta calidad te mantendrán abrigado mientras proyectas un estilo inconfundible.",
     imagen: "IMG/Hoodie Oni.jpeg",
@@ -560,6 +599,7 @@ export const todosLosProductos = [
   },
   {
     id: 41,
+    segmento: "neon-oni",
     nombre: "Hoodie  Oni",
     descripcion: "Hoodie Oni, cálido y resistente",
     imagen: "IMG/Hoodie Oni 2.jpeg",
@@ -574,6 +614,7 @@ export const todosLosProductos = [
   },
 ];
 let carrito = [];
+let segmentoActivo = 'anime';
 // Función para filtrar productos según el tipo 
 
 function filtrarProductos(tipo, busqueda = '') {
@@ -581,12 +622,27 @@ function filtrarProductos(tipo, busqueda = '') {
   // Si no existe el contenedor (por ejemplo, en index.html o compra.html), salir sin hacer nada
   if (!contenedor) return;
   contenedor.innerHTML = "";
+  // Tile destacado para segmento Neon Oni
+  if (segmentoActivo === 'neon-oni') {
+    const personal = document.createElement('a');
+    personal.href = 'personalizado.html';
+    personal.className = 'product-item';
+    personal.innerHTML = `
+      <img src="IMG/segunda imagen.jpg" alt="Personalizado" loading="lazy" decoding="async" width="300" height="300">
+      <p>Personalizado - Sube tu diseño</p>
+      <p>Cuéntanos tu idea</p>
+    `;
+    contenedor.appendChild(personal);
+  }
 
   // 1. Invertir el array para mostrar los más nuevos primero
   const productosMostrados = [...todosLosProductos].reverse();
 
+  // Filtrar por segmento (Anime / Neon Oni)
+  const porSegmento = productosMostrados.filter(p => (p.segmento || 'anime') === segmentoActivo);
+
   // 2. Filtrar por tipo (categoría)
-  let porTipo = tipo ? productosMostrados.filter(p => p.tipo === tipo) : productosMostrados;
+  let porTipo = tipo ? porSegmento.filter(p => p.tipo === tipo) : porSegmento;
 
   // 3. Filtrar por término de búsqueda
   const busquedaLower = busqueda.toLowerCase();
@@ -630,7 +686,7 @@ function filtrarProductos(tipo, busqueda = '') {
     contenedor.appendChild(item);
   });
 
-  document.querySelectorAll(".cta").forEach(btn => btn.classList.remove("filtro-activo"));
+  document.querySelectorAll(".filtros-container .cta").forEach(btn => btn.classList.remove("filtro-activo"));
   const btnActivo = document.getElementById(`btn-${tipo || 'todos'}`);
   if (btnActivo) {
     btnActivo.classList.add("filtro-activo");
@@ -862,6 +918,23 @@ function buscarProductos() {
     filtrarProductos(tipoFinal, busqueda);
 }
 
+// Cambiar segmento (Anime / Neon Oni)
+function setSegmento(seg) {
+  segmentoActivo = seg;
+  // Marcar visualmente el segmento activo
+  document.querySelectorAll('.segmentos-container .cta').forEach(btn => btn.classList.remove('filtro-activo'));
+  const segBtn = document.getElementById(`segmento-${seg}`);
+  if (segBtn) segBtn.classList.add('filtro-activo');
+
+  // Mantener filtros de categoría y búsqueda
+  const input = document.getElementById('search-input');
+  const busqueda = input ? input.value : '';
+  const botonActivo = document.querySelector('.filtros-container .cta.filtro-activo');
+  const tipoActivo = botonActivo ? botonActivo.id.replace('btn-', '') : 'todos';
+  const tipoFinal = tipoActivo === 'todos' ? '' : tipoActivo;
+  filtrarProductos(tipoFinal, busqueda);
+}
+
 // Exponer al contexto global
 window.filtrarProductos = filtrarProductos;
 window.agregarAlCarrito = agregarAlCarrito;
@@ -869,3 +942,4 @@ window.eliminarDelCarrito = eliminarDelCarrito;
 window.pagarAhora = pagarAhora;
 window.buscarProductos = buscarProductos;
 window.toggleCarritoPanel = toggleCarritoPanel;
+window.setSegmento = setSegmento;
